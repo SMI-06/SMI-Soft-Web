@@ -3,15 +3,14 @@ if (document.querySelector(".top")) {
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-4 col-lg-4 socialLinks">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61558826642078"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.threads.net/@smi.softs"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/smi.softs"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/smisofts/"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
                 <div class="col-md-8 col-lg-8 contactDetails">
-                    <a href="#"><i class="bi bi-geo-alt"></i> <span class="ms-1">2793 Strother Street, Birmingham, AL, Alabama</span></a>
-                    <a href="#"><i class="bi bi-telephone"></i> <span class="ms-1">Cell +123 456 7890</span></a>
+                    <a href="#"><i class="bi bi-geo-alt"></i> <span class="ms-1">SMI SOFTS, Green Town, Karachi, Pakistan</span></a>
+                    <a href="#"><i class="bi bi-telephone"></i> <span class="ms-1">Cell +92 301-024-7722</span></a>
                 </div>
             </div>
         </div>
@@ -36,10 +35,10 @@ if (document.querySelector("header")) {
             <a href="#services" class="nav-item hvr-buzz-out home"> <span>services</span></a>
             <a href="#portfolio" class="nav-item hvr-buzz-out home"> <span>portfolio</span></a>
             <a href="#team" class="nav-item hvr-buzz-out home"> <span>teams</span></a>
-            <a href="contact.html" class="btnPrimary hvr-buzz-out"> Get Quote</a>
+            <a href="contact.html" class="btnPrimary hvr-buzz-out">Contact Us</a>
         </nav>
         <div class="btnGroup">
-            <a href="contact.html" class="btnPrimary hvr-buzz-out"> Get Quote</a>
+            <a href="contact.html" class="btnPrimary hvr-buzz-out">Contact Us</a>
         </div>
         <div class="indicator"></div>
         </div>
@@ -91,7 +90,7 @@ if (document.querySelector("footer")) {
                         </div>
                         <div class="d-flex flex-column">
                             <span>call any way</span>
-                            <a href="tel:2-965-871-8617">2-965-871-8617</a>
+                            <a href="tel:+92 301-024-7722">+92 301-024-7722</a>
                         </div>
                     </div>
                 </div>
@@ -105,8 +104,7 @@ if (document.querySelector("footer")) {
                                 <i class="fa-solid fa-location-dot"></i>
                                 <span>address</span>
                             </div>
-                            <a href="#">House 168/170, Avenue 01, Mirpur DOHS,
-                                Dhaka Bangladesh</a>
+                            <a href="https://www.google.com/maps/dir//SMI+SOFTS+MC-1335(A+Azeem+Pura+Green+Town+Karachi,+75230/@24.8766528,67.164371,837m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x2b19914cac05997:0x924446a3bb37ae3!2m2!1d67.164371!2d24.8766528?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D">SMI SOFTS, Green Town, Shah Faisal Colony, Karachi, Pakistan</a>
                         </div>
                         <br>
                         <div class="d-flex flex-column info">
@@ -114,36 +112,30 @@ if (document.querySelector("footer")) {
                                 <i class="fa-solid fa-paper-plane"></i>
                                 <span>say hello</span>
                             </div>
-                            <a href="#">ifo@example.com</a>
-                            <a href="#">info@support.com</a>
+                            <a href="#">+92 301-024-7722</a>
+                            <a href="#">info.smisofts@gmail.com</a>
                         </div>
-                        <label>See Our New updates</label>
-                        <form action class="emailBox shadow">
-                            <input type="email" placeholder="Email here..."
-                                maxlength="40" required>
-                            <button><i class="fa-solid fa-arrow-right"></i></button>
-                        </form>
                     </div>
                     <div class="col-lg-3 col-md-3">
-                        <h2>our solution</h2>
+                        <h2>our services</h2>
                         <div class="links">
-                            <a href="#">web development</a>
-                            <a href="#">mobile development</a>
-                            <a href="#">cloud services</a>
-                            <a href="#">networking connectivity</a>
-                            <a href="#">data analytics</a>
-                            <a href="#">software development</a>
+                            <a href="#services">web design & development</a>
+                            <a href="#services">software development</a>
+                            <a href="#services">Graphic Designing</a>
+                            <a href="#services">Digital Marketing</a>
+                            <a href="#services">mobile app development</a>
+                            <a href="#services">Accounting and Finance</a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3">
+                      <div class="col-lg-3 col-md-3">
                         <h2>company</h2>
                         <div class="links">
-                            <a href="#">about us</a>
-                            <a href="how-we-work.html">how we work</a>
-                            <a href="#">news & article</a>
-                            <a href="#">out team</a>
-                            <a href="#">all portfolio</a>
-                            <a href="pricing.html">pricing plan</a>
+                            <a href="#about">about us</a>
+                            <a href="#how-we-work">how we work</a>
+                            <a href="#testimonials">testimonials</a>
+                            <a href="#team">our team</a>
+                            <a href="#portfolio">all portfolio</a>
+                            <a href="#pricing">pricing plan</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3">
@@ -161,12 +153,12 @@ if (document.querySelector("footer")) {
             </div>
             <hr>
             <div class="container bottomContainer">
-                <p>©Copyright 2023 <a href="index.html">SMI Softs</a> | Design By AR Assignments</p>
+                <p>©Copyright 2024 <a href="index.html">SMI SOFTS</a> | Design By SMI SOFTS</p>
                 <div class="social">
-                    <a href="#" class="shadow"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="shadow"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="shadow"><i class="fa-brands fa-pinterest-p"></i></a>
-                    <a href="#" class="shadow"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/smisofts/" class="shadow"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.threads.net/@smi.softs" class="shadow"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61558826642078" class="shadow"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/smi.softs" class="shadow"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
     `
