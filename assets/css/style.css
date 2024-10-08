@@ -800,11 +800,13 @@ header nav a {
 }
 
 .ourVisionSection img {
-    width: 80%;
+    width: 100%;
+    height: 40rem;
     object-fit: cover;
     border-radius: 48%;
     outline: 2px solid transparent;
     cursor: pointer;
+    margin-left: 25%;
 }
 
 .ourVisionSection img:hover {

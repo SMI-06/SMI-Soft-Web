@@ -30,11 +30,11 @@ if (document.querySelector("header")) {
             <i class="fas fa-bars"></i>
         </button>
         <nav>
-            <a href="#index" class="nav-item hvr-buzz-out home"> <span>home</span></a>
-            <a href="#about" class="nav-item hvr-buzz-out home"> <span>about</span></a>
-            <a href="#services" class="nav-item hvr-buzz-out home"> <span>services</span></a>
-            <a href="#portfolio" class="nav-item hvr-buzz-out home"> <span>portfolio</span></a>
-            <a href="#team" class="nav-item hvr-buzz-out home"> <span>teams</span></a>
+            <a href="index.html#index" class="nav-item hvr-buzz-out home"> <span>home</span></a>
+            <a href="index.html#about" class="nav-item hvr-buzz-out home"> <span>about</span></a>
+            <a href="index.html#services" class="nav-item hvr-buzz-out home"> <span>services</span></a>
+            <a href="index.html#portfolio" class="nav-item hvr-buzz-out home"> <span>portfolio</span></a>
+            <a href="index.html#team" class="nav-item hvr-buzz-out home"> <span>teams</span></a>
             <a href="contact.html" class="btnPrimary hvr-buzz-out">Contact Us</a>
         </nav>
         <div class="btnGroup">
@@ -130,12 +130,12 @@ if (document.querySelector("footer")) {
                       <div class="col-lg-3 col-md-3">
                         <h2>company</h2>
                         <div class="links">
-                            <a href="#about">about us</a>
-                            <a href="#how-we-work">how we work</a>
-                            <a href="#testimonials">testimonials</a>
-                            <a href="#team">our team</a>
-                            <a href="#portfolio">all portfolio</a>
-                            <a href="#pricing">pricing plan</a>
+                            <a href="index.html#about">about us</a>
+                            <a href="index.html#how-we-work">how we work</a>
+                            <a href="index.html#testimonials">testimonials</a>
+                            <a href="index.html#team">our team</a>
+                            <a href="index.html#portfolio">all portfolio</a>
+                            <a href="index.html#pricing">pricing plan</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3">
