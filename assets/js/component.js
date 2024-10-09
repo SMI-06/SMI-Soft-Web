@@ -3,10 +3,10 @@ if (document.querySelector(".top")) {
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-4 col-lg-4 socialLinks">
+                <a href="https://www.linkedin.com/in/smisofts/"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://www.facebook.com/profile.php?id=61558826642078"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.threads.net/@smi.softs"><i class="fa-brands fa-twitter"></i></a>
                     <a href="https://www.instagram.com/smi.softs"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/smisofts/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.threads.net/@smi.softs"><i class="fa-brands fa-threads"></i></a>
                 </div>
                 <div class="col-md-8 col-lg-8 contactDetails">
                     <a href="#"><i class="bi bi-geo-alt"></i> <span class="ms-1">SMI SOFTS, Green Town, Karachi, Pakistan</span></a>
@@ -30,7 +30,7 @@ if (document.querySelector("header")) {
             <i class="fas fa-bars"></i>
         </button>
         <nav>
-            <a href="index.html#index" class="nav-item hvr-buzz-out home"> <span>home</span></a>
+            <a href="index.html" class="nav-item hvr-buzz-out home"> <span>home</span></a>
             <a href="index.html#about" class="nav-item hvr-buzz-out home"> <span>about</span></a>
             <a href="index.html#services" class="nav-item hvr-buzz-out home"> <span>services</span></a>
             <a href="index.html#portfolio" class="nav-item hvr-buzz-out home"> <span>portfolio</span></a>
@@ -119,12 +119,12 @@ if (document.querySelector("footer")) {
                     <div class="col-lg-3 col-md-3">
                         <h2>our services</h2>
                         <div class="links">
-                            <a href="#services">web design & development</a>
-                            <a href="#services">software development</a>
-                            <a href="#services">Graphic Designing</a>
-                            <a href="#services">Digital Marketing</a>
-                            <a href="#services">mobile app development</a>
-                            <a href="#services">Accounting and Finance</a>
+                            <a href="index.html#services">web design & development</a>
+                            <a href="index.html#services">software development</a>
+                            <a href="index.html#services">Graphic Designing</a>
+                            <a href="index.html#services">Digital Marketing</a>
+                            <a href="index.html#services">mobile app development</a>
+                            <a href="index.html#services">Accounting and Finance</a>
                         </div>
                     </div>
                       <div class="col-lg-3 col-md-3">
@@ -156,9 +156,9 @@ if (document.querySelector("footer")) {
                 <p>©Copyright 2024 <a href="index.html">SMI SOFTS</a></p>
                 <div class="social">
                 <a href="https://www.linkedin.com/in/smisofts/" class="shadow"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.threads.net/@smi.softs" class="shadow"><i class="fa-brands fa-twitter"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=61558826642078" class="shadow"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/smi.softs" class="shadow"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.threads.net/@smi.softs" class="shadow"><i class="fa-brands fa-threads"></i></a>
                 </div>
             </div>
     `
