@@ -3021,6 +3021,7 @@ header nav a {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #535353;
     border: 1px solid var(--secondary-color-dark);
     border-radius: 5px;
 }
