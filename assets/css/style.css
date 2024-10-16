@@ -954,6 +954,18 @@ header nav a {
 .howWeWorkSection .col-lg-4:nth-child(3n) .card {
     animation: cardScaleAnim 1s 0.4s forwards cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
+/* Team Members Cards */
+.howWeWorkSection .col-lg-6:nth-child(1n) .card {
+    animation: cardScaleAnim 1s 0.0s forwards cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.howWeWorkSection .col-lg-6:nth-child(2n) .card {
+    animation: cardScaleAnim 1s 0.2s forwards cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.howWeWorkSection .col-lg-6:nth-child(3n) .card {
+    animation: cardScaleAnim 1s 0.4s forwards cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+/* Team Members Cards */
+
 
 .howWeWorkSection .card:hover {
     outline: 2px solid var(--primary-color-dark);

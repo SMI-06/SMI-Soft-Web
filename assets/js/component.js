@@ -33,8 +33,7 @@ if (document.querySelector("header")) {
             <a href="index.html" class="nav-item hvr-buzz-out home"> <span>home</span></a>
             <a href="index.html#about" class="nav-item hvr-buzz-out home"> <span>about</span></a>
             <a href="index.html#services" class="nav-item hvr-buzz-out home"> <span>services</span></a>
-            <a href="index.html#portfolio" class="nav-item hvr-buzz-out home"> <span>portfolio</span></a>
-            <a href="index.html#team" class="nav-item hvr-buzz-out home"> <span>teams</span></a>
+            <a href="team.html" class="nav-item hvr-buzz-out home"> <span>team</span></a>
             <a href="contact.html" class="btnPrimary hvr-buzz-out">Contact Us</a>
         </nav>
         <div class="btnGroup">
@@ -134,7 +133,6 @@ if (document.querySelector("footer")) {
                             <a href="index.html#how-we-work">how we work</a>
                             <a href="index.html#testimonials">testimonials</a>
                             <a href="index.html#team">our team</a>
-                            <a href="index.html#portfolio">all portfolio</a>
                             <a href="index.html#pricing">pricing plan</a>
                         </div>
                     </div>
@@ -163,6 +161,15 @@ if (document.querySelector("footer")) {
             </div>
     `
 }
+
+// <a href="index.html#portfolio" class="nav-item hvr-buzz-out home"> <span>portfolio</span></a>
+// <a href="index.html#portfolio">all portfolio</a>
+
+
+
+
+
+
 
 // if (document.querySelector(".anyQuestionSection")) {
 //     document.querySelector(".anyQuestionSection").classList.add("py-5");
