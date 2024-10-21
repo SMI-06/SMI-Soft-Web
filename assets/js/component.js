@@ -52,7 +52,7 @@ if (document.querySelector("header")) {
     let cascading = page.split(",")
     document.querySelectorAll("header nav a").forEach(ele => {
         if (cascading.length > 1) {
-            for (let i = 0; i < cascading.length; i++){
+            for (let i = 0; i < cascading.length; i++) {
                 if (ele.classList.contains(`${cascading[i]}`)) {
                     document.querySelector(`header nav a.${cascading[i]}`).classList.add("active");
                 }
@@ -97,7 +97,7 @@ if (document.querySelector("footer")) {
             <hr>
             <div class="container py-3">
                 <div class="row">
-                    <div class="col-lg-3 col-md-3">
+                    <div class="col-lg-4 col-md-4">
                         <div class="d-flex flex-column info">
                             <div class="title">
                                 <i class="fa-solid fa-location-dot"></i>
@@ -115,7 +115,7 @@ if (document.querySelector("footer")) {
                             <a href="#">info.smisofts@gmail.com</a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3">
+                    <div class="col-lg-4 col-md-4">
                         <h2>our services</h2>
                         <div class="links">
                             <a href="index.html#services">web design & development</a>
@@ -126,7 +126,7 @@ if (document.querySelector("footer")) {
                             <a href="index.html#services">Accounting and Finance</a>
                         </div>
                     </div>
-                      <div class="col-lg-3 col-md-3">
+                      <div class="col-lg-4 col-md-4">
                         <h2>company</h2>
                         <div class="links">
                             <a href="index.html#about">about us</a>
@@ -136,22 +136,11 @@ if (document.querySelector("footer")) {
                             <a href="index.html#pricing">pricing plan</a>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3">
-                        <h2>resources</h2>
-                        <div class="links">
-                            <a href="#">support area</a>
-                            <a href="#">support policy</a>
-                            <a href="#">terms & conditions</a>
-                            <a href="#">privacy policy</a>
-                            <a href="#">career</a>
-                            <a href="#">pricing plan</a>
-                        </div>
-                    </div>
                 </div>
             </div>
             <hr>
             <div class="container bottomContainer">
-                <p>©Copyright 2024 <a href="index.html">SMI SOFTS</a></p>
+                <p>©Copyright 2024 | <a href="index.html"> SMI SOFTS</a></p>
                 <div class="social">
                 <a href="https://www.linkedin.com/in/smisofts/" class="shadow"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=61558826642078" class="shadow"><i class="fa-brands fa-facebook-f"></i></a>
@@ -164,6 +153,18 @@ if (document.querySelector("footer")) {
 
 // <a href="index.html#portfolio" class="nav-item hvr-buzz-out home"> <span>portfolio</span></a>
 // <a href="index.html#portfolio">all portfolio</a>
+
+{/* <div class="col-lg-3 col-md-3">
+    <h2>resources</h2>
+    <div class="links">
+        <a href="#">support area</a>
+        <a href="#">support policy</a>
+        <a href="#">terms & conditions</a>
+        <a href="#">privacy policy</a>
+        <a href="#">career</a>
+        <a href="#">pricing plan</a>
+    </div>
+</div> */}
 
 
 

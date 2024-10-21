@@ -3216,7 +3216,7 @@ footer h2 {
     font-size: 1.5em;
     color: #333333;
     margin-bottom: 0.8em;
-
+    margin-left: 6em;
     @media only screen and (max-width: 768px) {
         text-align: center;
         font-size: 1.3em;
@@ -3226,6 +3226,7 @@ footer h2 {
 }
 
 footer .links {
+    margin-left: 9em;   
     display: flex;
     gap: 0.5em;
     flex-direction: column;
