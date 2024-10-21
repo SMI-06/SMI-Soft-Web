@@ -111,8 +111,8 @@ if (document.querySelector("footer")) {
                                 <i class="fa-solid fa-paper-plane"></i>
                                 <span>say hello</span>
                             </div>
-                            <a href="#">+92 301-024-7722</a>
-                            <a href="#">info.smisofts@gmail.com</a>
+                            <a href="">+92 301-024-7722</a>
+                            <a href="">info.smisofts@gmail.com</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4">
