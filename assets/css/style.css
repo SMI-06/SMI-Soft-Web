@@ -907,6 +907,8 @@ header nav a {
     }
 }
 
+/* How we Section On Index Page */
+
 .howWeWorkSection .btnContainer {
     display: flex;
     align-items: center;
@@ -954,17 +956,6 @@ header nav a {
 .howWeWorkSection .col-lg-4:nth-child(3n) .card {
     animation: cardScaleAnim 1s 0.4s forwards cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
-/* Team Members Cards */
-.howWeWorkSection .col-lg-6:nth-child(1n) .card {
-    animation: cardScaleAnim 1s 0.0s forwards cubic-bezier(0.68, -0.6, 0.32, 1.6);
-}
-.howWeWorkSection .col-lg-6:nth-child(2n) .card {
-    animation: cardScaleAnim 1s 0.2s forwards cubic-bezier(0.68, -0.6, 0.32, 1.6);
-}
-.howWeWorkSection .col-lg-6:nth-child(3n) .card {
-    animation: cardScaleAnim 1s 0.4s forwards cubic-bezier(0.68, -0.6, 0.32, 1.6);
-}
-/* Team Members Cards */
 
 
 .howWeWorkSection .card:hover {
@@ -1057,6 +1048,157 @@ header nav a {
     }
 }
 
+/* Team Page Section Of How We Work */
+.howWeWorkSectionTeam .btnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.howWeWorkSectionTeam .btnContainer button {
+    text-align: center;
+    font-family: 'outfit';
+    text-transform: capitalize;
+    padding: 12px 25px;
+    width: 150px;
+    color: #a1a1a1;
+}
+
+.howWeWorkSectionTeam .btnContainer button.active {
+    background-color: #fff;
+    color: #333333;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.howWeWorkSectionTeam .card {
+    border: none;
+    border-radius: 20px;
+    padding: 2.0em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: 100%;
+    outline: 2px solid transparent;
+    scale: 0;
+}
+
+.howWeWorkSectionTeam .col-lg-4:nth-child(1n) .card {
+    animation: cardScaleAnim 1s 0.0s forwards cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.howWeWorkSectionTeam .col-lg-4:nth-child(2n) .card {
+    animation: cardScaleAnim 1s 0.2s forwards cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.howWeWorkSectionTeam .col-lg-4:nth-child(3n) .card {
+    animation: cardScaleAnim 1s 0.4s forwards cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+/* Team Members Cards on Team Page*/
+.howWeWorkSectionTeam .col-lg-6:nth-child(1n) .card {
+    animation: cardScaleAnim 1s 0.0s forwards cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.howWeWorkSectionTeam .col-lg-6:nth-child(2n) .card {
+    animation: cardScaleAnim 1s 0.2s forwards cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.howWeWorkSectionTeam .col-lg-6:nth-child(3n) .card {
+    animation: cardScaleAnim 1s 0.4s forwards cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.howWeWorkSectionTeam .card:hover {
+    outline: 2px solid var(--primary-color-dark);
+    outline-offset: 10px;
+    scale: 0.95;
+}
+
+.howWeWorkSectionTeam .card img {
+    width: 20%;
+    border-radius: 50%;
+    /* border: 1px solid #d9232d; */
+    margin-bottom: 1.0em;
+
+    @media only screen and (max-width: 768px) {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.howWeWorkSectionTeam .card h1 {
+    font-family: 'outfit';
+    font-size: 1.9em;
+    font-weight: bold;
+
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+    }
+}
+
+.howWeWorkSectionTeam .card p {
+    font-family: 'poppins';
+    margin-bottom: 0px;
+    color: var(--para-text-color);
+    flex-grow: 1;
+
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+        font-size: 0.9em;
+    }
+}
+
+.howWeWorkSectionTeam .card .indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    border-radius: 5px;
+    background-image: var(--linear-gradient-left-primary);
+}
+
+.howWeWorkSectionTeam .card:hover .indicator {
+    width: 100%;
+}
+
+.howWeWorkSectionTeam .card::after {
+    content: attr(data-count);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100%;
+    line-height: 0;
+    font-size: 17.0em;
+    text-align: center;
+    font-family: 'outfit';
+    color: #f0f0f0;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: all 0.4s ease;
+}
+
+.howWeWorkSectionTeam .card:hover::after {
+    opacity: 1;
+}
+
+.howWeWorkSectionTeam .card .content {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+@keyframes cardScaleAnim {
+    from {
+        scale: 0;
+    }
+
+    to {
+        scale: 1;
+    }
+}
+
+/* Testimonials Section */
 .testimonialsSection .margin30 {
     @media only screen and (min-width: 992px) {
         margin-top: 0px;
