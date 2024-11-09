@@ -1,14 +1,14 @@
-document.onreadystatechange = function () {
-    if (document.readyState !== "complete") {
-        document.querySelector(".preloader").classList.add("active");
-    } else {
-        document.querySelector(".preloader").style.opacity = "0";
-        setTimeout(() => {
-            document.querySelector(".preloader").classList.remove("active");
-            document.querySelector(".preloader").style.display = "none";
-        }, 1200)
-    }
-};
+// document.onreadystatechange = function () {
+//     if (document.readyState !== "complete") {
+//         document.querySelector(".preloader").classList.add("active");
+//     } else {
+//         document.querySelector(".preloader").style.opacity = "0";
+//         setTimeout(() => {
+//             document.querySelector(".preloader").classList.remove("active");
+//             document.querySelector(".preloader").style.display = "none";
+//         }, 1200)
+//     }
+// };
 
 function menuToggle() {
     if (document.querySelector("header nav").classList.contains("active")) {
