@@ -907,9 +907,7 @@
                             online. Whether you're a startup searching
                             for a simple website or an established company
                             looking for advanced software solutions, we have
-                            the right package for you.
-                        </p>
-                        <p class="para">
+                            the right package for you. <br>
                             Regardless of which plan you select, you will
                             benefit from our knowledge, quick turnaround
                             times, and exceptional customer service. Let us help
@@ -922,7 +920,18 @@
                         class="col-lg-4 col-md-4 mb-3 d-flex align-items-center justify-content-center">
                         <div class="btnContainer" id="myTab" role="tablist">
                             <div class="nav-item" role="presentation">
-                                <button class="nav-link active" id="yearly-tab"
+                                <button class="nav-link active"
+                                    id="monthly-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#monthly-tab-pane"
+                                    type="button" role="tab"
+                                    aria-controls="monthly-tab-pane"
+                                    aria-selected="true"> <span
+                                        class="hvr-wobble-vertical">billed
+                                        monthly</span></button>
+                            </div>
+                            <div class="nav-item" role="presentation">
+                                <button class="nav-link" id="yearly-tab"
                                     data-bs-toggle="tab"
                                     data-bs-target="#yearly-tab-pane"
                                     type="button" role="tab"
@@ -935,9 +944,99 @@
                     </div>
                 </div>
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="monthly-tab-pane"
+                    <div class="tab-pane fade show active"
+                        id="monthly-tab-pane"
+                        role="tabpanel" aria-labelledby="monthly-tab"
+                        tabindex="0">
+
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 mb-3 item threebox2">
+                                <div class="card shadow-lg">
+                                    <div class="card-header">
+                                        <h3>Professional plan</h3>
+                                        <div class="price">
+                                            <span class="currency">$</span>
+                                            <span class="amount">250</span>
+                                            <span class="status">/monthly</span>
+                                        </div>
+                                        <img
+                                            src="https://demo-egenslab.b-cdn.net/html/softconic/preview/assets/img/home-3/pricing-vec1.svg"
+                                            alt>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="lists">
+                                            <p>Website Design & Development</p>
+                                            <p>Domain & Hosting (1 Year)</p>
+                                            <p>Limited Revision (5 Times)</p>
+                                            <p>Unlimited Support</p>
+                                            <p>Suitable For Medium
+                                                Businesses</p>
+                                        </div>
+                                        <a href="#" class="btnPrimary">Pay
+                                            now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 mb-3 item threebox2">
+                                <div class="card shadow-lg active">
+                                    <div class="card-header">
+                                        <h3>Basic plan</h3>
+                                        <div class="price">
+                                            <span class="currency">$</span>
+                                            <span class="amount">150</span>
+                                            <span class="status">/monthly</span>
+                                        </div>
+                                        <div class="offer">
+                                            <span>30%</span>
+                                            off
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="lists">
+                                            <p>Website Design and Development
+                                                (10 Pages)</p>
+                                            <p>Domain and Hosting (1 Year)</p>
+                                            <p>Limited Revision (3 Times)</p>
+                                            <p>Limited Support</p>
+                                            <p>Suitable For Small Businesses</p>
+                                        </div>
+                                        <a href="#" class="btnPrimary">Pay
+                                            now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 mb-3 item threebox2">
+                                <div class="card shadow-lg">
+                                    <div class="card-header">
+                                        <h3>Enterprise plan</h3>
+                                        <div class="price">
+                                            <span class="currency">$</span>
+                                            <span class="amount">500</span>
+                                            <span class="status">/monthly</span>
+                                        </div>
+                                        <img
+                                            src="https://demo-egenslab.b-cdn.net/html/softconic/preview/assets/img/home-3/pricing-vec2.svg"
+                                            alt>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="lists">
+                                            <p>Website Design & Development</p>
+                                            <p>Domain & Hosting (2 Year)</p>
+                                            <p>Unlimited Revision</p>
+                                            <p>Unlimited Support</p>
+                                            <p>Suitable For All Businesses</p>
+                                        </div>
+                                        <a href="#" class="btnPrimary">Pay
+                                            now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="yearly-tab-pane"
                         role="tabpanel"
-                        aria-labelledby="monthly-tab" tabindex="0">
+                        aria-labelledby="yearly-tab" tabindex="0">
 
                         <div class="row">
                             <div class="col-lg-4 col-md-4 mb-3 item threebox2">

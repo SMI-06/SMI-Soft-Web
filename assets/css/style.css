@@ -1079,7 +1079,7 @@ header nav a {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    height: 100%;
+    /* height: 100%; */
     outline: 2px solid transparent;
 }
 
@@ -1091,6 +1091,9 @@ header nav a {
 
 .teamSection .card img {
     width: calc(100% - 2.0rem);
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -1101,23 +1104,32 @@ header nav a {
     font-size: 1.9em;
     font-weight: bold;
     text-align: center;
+    color: #fff;
 
     @media only screen and (max-width: 768px) {
         text-align: center;
     }
 }
 
+.teamSection .card:hover h1{
+    color: #242424;
+}
+
 .teamSection .card p {
     font-family: 'poppins';
     margin-bottom: 0px;
-    color: var(--para-text-color);
+    color: #fff;
     flex-grow: 1;
     text-align: center;
-
+    
     @media only screen and (max-width: 768px) {
         text-align: center;
         font-size: 0.9em;
     }
+}
+
+.teamSection .card:hover p {
+    color: var(--para-text-color);
 }
 
 .teamSection .card .indicator {
@@ -1125,7 +1137,7 @@ header nav a {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 5px;
+    height: 0px;
     border-radius: 5px;
     background-image: var(--linear-gradient-left-primary);
 }
@@ -1164,8 +1176,12 @@ header nav a {
     /* background-color: white; */
 }
 .teamSection .card .content .titles{
-    background-color: white;
+    background-color: var(--primary-color-dark);
     padding: 2.0rem;
+    height: 100%;
+}
+.teamSection .card:hover .content .titles{
+    background-color: white;
 }
 
 /* Testimonials Section */
