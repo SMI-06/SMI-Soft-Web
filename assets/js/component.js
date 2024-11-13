@@ -32,9 +32,9 @@ if (document.querySelector("header")) {
         <nav>
             <a href="index.html" class="nav-item hvr-buzz-out home"> <span>home</span></a>
             <a href="index.html#about" class="nav-item hvr-buzz-out home"> <span>about</span></a>
+            <a href="index.html#portfolio" class="nav-item hvr-buzz-out home"> <span>portfolio</span></a>
             <a href="index.html#services" class="nav-item hvr-buzz-out home"> <span>services</span></a>
             <a href="team.html" class="nav-item hvr-buzz-out home"> <span>team</span></a>
-            <a href="contact.html" class="btnPrimary hvr-buzz-out">Contact Us</a>
         </nav>
         <div class="btnGroup">
             <a href="contact.html" class="btnPrimary hvr-buzz-out">Contact Us</a>
@@ -99,11 +99,14 @@ if (document.querySelector("footer")) {
                 <div class="row">
                     <div class="col-lg-4 col-md-4">
                         <div class="d-flex flex-column info">
+                            <a href="javascript:void(0)" style="cursor: default; pointer-events: none;">Business Growth Agency, Provide 360 solution to make
+                            sure the business growth and
+                            visibility 100%.</a>
                             <div class="title">
                                 <i class="fa-solid fa-location-dot"></i>
                                 <span>address</span>
                             </div>
-                            <a href="https://www.google.com/maps/dir//SMI+SOFTS+MC-1335(A+Azeem+Pura+Green+Town+Karachi,+75230/@24.8766528,67.164371,837m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x2b19914cac05997:0x924446a3bb37ae3!2m2!1d67.164371!2d24.8766528?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D">SMI SOFTS, Green Town, Shah Faisal Colony, Karachi, Pakistan</a>
+                            <a href="https://www.google.com/maps/dir//SMI+SOFTS+MC-1335(A+Azeem+Pura+Green+Town+Karachi,+75230/@24.8766528,67.164371,837m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x2b19914cac05997:0x924446a3bb37ae3!2m2!1d67.164371!2d24.8766528?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D" target="_blank">SMI SOFTS, Green Town, Shah Faisal Colony, Karachi, Pakistan</a>
                         </div>
                         <br>
                         <div class="d-flex flex-column info">
@@ -111,11 +114,11 @@ if (document.querySelector("footer")) {
                                 <i class="fa-solid fa-paper-plane"></i>
                                 <span>say hello</span>
                             </div>
-                            <a href="">+92 301-024-7722</a>
-                            <a href="">info.smisofts@gmail.com</a>
+                            <a href="tel:+92 301-024-7722">+92 301-024-7722</a>
+                            <a href="mailto:info.smisofts@gmail.com">info.smisofts@gmail.com</a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4">
+                    <div class="col-lg-3 col-md-3">
                         <h2>our services</h2>
                         <div class="links">
                             <a href="index.html#services">web design & development</a>
@@ -126,7 +129,7 @@ if (document.querySelector("footer")) {
                             <a href="index.html#services">Accounting and Finance</a>
                         </div>
                     </div>
-                      <div class="col-lg-4 col-md-4">
+                    <div class="col-lg-2 col-md-2">
                         <h2>company</h2>
                         <div class="links">
                             <a href="index.html#about">about us</a>
@@ -135,6 +138,17 @@ if (document.querySelector("footer")) {
                             <a href="index.html#team">our team</a>
                             <a href="index.html#pricing">pricing plan</a>
                         </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <label class="mt-lg-0 mt-md-0">See Our New Updates</label>
+                        <form action="mailto:info.smisofts@gmail.com" method="post" enctype="text/plain" class="emailBox">
+                            <input type="email" placeholder="Email here..."
+                                maxlength="40" name="mail" required>
+                            <button><i class="fa-solid fa-arrow-right"></i></button>
+                        </form>
+                        <iframe class="footerMap"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.6249228287566!2d67.16220575552589!3d24.876656876767974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2b19914cac05997%3A0x924446a3bb37ae3!2sSMI%20SOFTS!5e0!3m2!1sen!2s!4v1728140218332!5m2!1sen!2s"
+            allowfullscreen loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
@@ -165,11 +179,6 @@ if (document.querySelector("footer")) {
         <a href="#">pricing plan</a>
     </div>
 </div> */}
-
-
-
-
-
 
 
 // if (document.querySelector(".anyQuestionSection")) {

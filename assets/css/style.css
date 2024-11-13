@@ -129,6 +129,93 @@
     color: var(--primary-color-dark);
 }
 
+.floatingAction.active {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    translate: 0 0;
+}
+
+.floatingAction.up {
+    translate: 0 -3.0em;
+}
+
+.floatingAction {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    translate: 0 5.0em;
+    background-image: linear-gradient(45deg, var(--primary-color-dark), var(--primary-color-light));
+    color: #fff !important;
+    z-index: 1212;
+    animation: floatingAction 0.5s ease-in-out forwards, floatingActionRotate 3s ease infinite !important;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    outline: 2px solid transparent;
+}
+
+.floatingAction .innerFloating {
+    animation: floatingActionInnerRotate 3s ease infinite reverse !important;
+}
+
+.floatingAction:active {
+    scale: 0.9;
+    animation: floatingActionRotate 0.2s linear infinite !important;
+}
+
+.floatingAction:hover {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 7px;
+}
+
+body:has(.modalSection.active) .floatingAction,
+body:has(.modalSection.active) .whatsappChat {
+    translate: 0 5.0em;
+    pointer-events: none;
+}
+
+
+@keyframes floatingAction {
+    from {
+        transform: translateX(100px) scale(0.5);
+    }
+
+    to {
+        transform: translateX(0px) scale(1.0);
+    }
+}
+
+@keyframes floatingActionRotate {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: -360deg;
+    }
+}
+
+@keyframes floatingActionInnerRotate {
+    0% {
+        rotate: -180deg;
+    }
+
+    50% {
+        rotate: -360deg;
+    }
+
+    100% {
+        rotate: -180deg;
+    }
+}
+
 
 html {
     scroll-behavior: smooth;
@@ -801,12 +888,11 @@ header nav a {
 
 .ourVisionSection img {
     width: 100%;
-    height: 40rem;
+    height: auto;
     object-fit: cover;
-    border-radius: 48%;
+    border-radius: 30px;
     outline: 2px solid transparent;
     cursor: pointer;
-    margin-left: 25%;
 }
 
 .ourVisionSection img:hover {
@@ -1054,7 +1140,7 @@ header nav a {
 }
 
 .howWeWorkSection .card .content {
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-direction: column;
     z-index: 10;
@@ -1111,7 +1197,7 @@ header nav a {
     }
 }
 
-.teamSection .card:hover h1{
+.teamSection .card:hover h1 {
     color: #242424;
 }
 
@@ -1121,7 +1207,7 @@ header nav a {
     color: #fff;
     flex-grow: 1;
     text-align: center;
-    
+
     @media only screen and (max-width: 768px) {
         text-align: center;
         font-size: 0.9em;
@@ -1175,13 +1261,32 @@ header nav a {
     padding-top: 2.0rem;
     /* background-color: white; */
 }
-.teamSection .card .content .titles{
+
+.teamSection .card .content .titles {
     background-color: var(--primary-color-dark);
     padding: 2.0rem;
     height: 100%;
+    border-radius: 20px;
 }
-.teamSection .card:hover .content .titles{
+
+.teamSection .card:hover .content .titles {
     background-color: white;
+}
+
+.teamSection .swiper-pagination {
+    transform: translateY(14px);
+    padding-top: 50px;
+}
+
+.teamSection .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: var(--primary-color-dark);
+    width: 40px;
+    border-radius: 10px;
+}
+
+.teamSection .swiper-pagination-bullet {
+    background-color: #cecece;
+    opacity: 1;
 }
 
 /* Testimonials Section */
@@ -2120,6 +2225,11 @@ header nav a {
     }
 }
 
+.pricingSection .card.active .btnPrimary {
+    background-image: linear-gradient(to top, #fff, #fff) !important;
+    color: var(--primary-color-dark);
+}
+
 .pricingSection .card.active .card-header {
     background-color: transparent;
     border-color: #fff;
@@ -2279,6 +2389,28 @@ header nav a {
 
 .blogSection {
     /* overflow-x: auto !important; */
+}
+
+.blogSection .swiper-pagination {
+    /* transform: translateY(14px); */
+    padding-top: 50px;
+}
+
+.blogSection .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: var(--primary-color-dark);
+    width: 40px;
+    border-radius: 10px;
+}
+
+.blogSection .swiper-pagination-bullet {
+    background-color: #cecece;
+    opacity: 1;
+}
+
+.blogSection .myProjects img{
+    height: 90vh;
+    object-fit: cover;
+    object-position: top;
 }
 
 .blogSection .sidePane .card .inputGroup {
@@ -2477,8 +2609,14 @@ header nav a {
 .blogSection .blogContainer .card .content .title {
     font-family: 'outfit';
     font-size: 1.6em;
+    display: inline-block;
+    width: calc(100% - 0.3em);
     color: #333333;
     font-weight: bolder;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
 }
 
 .blogSection .blogContainer .card .content .title:hover {
@@ -2844,7 +2982,7 @@ header nav a {
 }
 
 .blogSection .paginations a .imageContainer span i {
-    transform: rotate(-45deg);
+    /* transform: rotate(-45deg); */
     color: #fff;
 }
 
@@ -3201,6 +3339,16 @@ header nav a {
     width: 100%;
     height: 80vh;
     border: none;
+    border-radius: 20px 20px 0 0;
+}
+
+.footerMap {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 20px;
+    outline: 2px solid var(--primary-color-dark);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .teamContainer .col-lg-3:nth-child(1n) .card {
@@ -3370,7 +3518,6 @@ footer h2 {
     font-size: 1.5em;
     color: #333333;
     margin-bottom: 0.8em;
-    margin-left: 6em;
 
     @media only screen and (max-width: 768px) {
         text-align: center;
@@ -3381,7 +3528,6 @@ footer h2 {
 }
 
 footer .links {
-    margin-left: 9em;
     display: flex;
     gap: 0.5em;
     flex-direction: column;
@@ -3468,6 +3614,7 @@ footer .emailBox {
     align-items: center;
     justify-content: center;
     margin-bottom: 1.0em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
 
 footer .emailBox input {
@@ -3495,11 +3642,11 @@ footer .emailBox button {
     align-items: center;
     justify-content: center;
     border-radius: 0 8px 8px 0;
-    background-color: var(--secondary-color-dark);
+    background-color: var(--primary-color-dark);
 }
 
 footer .emailBox button:hover {
-    background-color: var(--primary-color-dark);
+    background-color: var(--primary-color-light);
 }
 
 footer .emailBox button i {
