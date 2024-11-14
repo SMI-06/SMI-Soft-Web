@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +7,10 @@
         <link rel="shortcut icon" href="assets/images/favicon.png">
         <link rel="stylesheet" href="assets/css/config.css">
     </head>
+
+    <script>
+        var url = new URLSearchParams(window.location.search).get('id')
+    </script>
 
     <body>
         <!-- <div class="preloader active">
@@ -46,19 +49,59 @@
                 <div class="swiper myProjects mt-3 shadow-lg rounded-4">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide rounded-4 overflow-hidden">
-                            <img src="assets/images/Web-dev-portfolio.png" class="w-100 rounded-4" alt>
+                            <script>
+                                if(url == "lawyer"){
+                                    document.write('<img src="assets/images/projects-images/law-1.png" class="w-100 rounded-4" alt>');
+                                } else if(url == "lab"){
+                                    document.write('<img src="assets/images/projects-images/Lab-1.png" class="w-100 rounded-4" alt>')
+                                }else if(url == "e-com"){
+                                    document.write('<img src="assets/images/web-design-porfolio.png" class="w-100 rounded-4" alt>')
+                                }
+                            </script>
                         </div>
                         <div class="swiper-slide rounded-4 overflow-hidden">
-                            <img src="assets/images/Web-dev-portfolio-1.jpg" class="w-100 rounded-4" alt>
+                            <script>
+                                if(url == "lawyer"){
+                                    document.write('<img src="assets/images/projects-images/law-2.jpg" class="w-100 rounded-4" alt>');
+                                } else if(url == "lab"){
+                                    document.write('<img src="assets/images/projects-images/Lab-2.png" class="w-100 rounded-4" alt>')
+                                }else if(url == "e-com"){
+                                    document.write('<img src="assets/images/web-design-porfolio-2.png" class="w-100 rounded-4" alt>')
+                                }
+                            </script>
                         </div>
                         <div class="swiper-slide rounded-4 overflow-hidden">
-                            <img src="assets/images/Web-dev-portfolio-2.jpg" class="w-100 rounded-4" alt>
+                            <script>
+                                if(url == "lawyer"){
+                                    document.write('<img src="assets/images/projects-images/law-3.jpg" class="w-100 rounded-4" alt>');
+                                } else if(url == "lab"){
+                                    document.write('<img src="assets/images/projects-images/Lab-3.png" class="w-100 rounded-4" alt>')
+                                }else if(url == "e-com"){
+                                    document.write('<img src="assets/images/web-design-porfolio-3.png" class="w-100 rounded-4" alt>')
+                                }
+                            </script>
                         </div>
                         <div class="swiper-slide rounded-4 overflow-hidden">
-                            <img src="assets/images/Web-dev-portfolio-3.jpg" class="w-100 rounded-4" alt>
+                            <script>
+                                if(url == "lawyer"){
+                                    document.write('<img src="assets/images/projects-images/law-4.jpg" class="w-100 rounded-4" alt>');
+                                } else if(url == "lab"){
+                                    document.write('<img src="assets/images/projects-images/Lab-4.jpg" class="w-100 rounded-4" alt>')
+                                }else if(url == "e-com"){
+                                    document.write('<img src="assets/images/web-design-porfolio.png-4" class="w-100 rounded-4" alt>')
+                                }
+                            </script>
                         </div>
                         <div class="swiper-slide rounded-5 overflow-hidden">
-                            <img src="assets/images/Web-dev-portfolio-4.jpg" class="w-100 rounded-5" alt>
+                            <script>
+                                if(url == "lawyer"){
+                                    document.write('<img src="assets/images/projects-images/law-5.jpg" class="w-100 rounded-4" alt>');
+                                } else if(url == "lab"){
+                                    document.write('<img src="assets/images/projects-images/Lab-5.png" class="w-100 rounded-4" alt>')
+                                }else if(url == "e-com"){
+                                    document.write('<img src="assets/images/web-design-porfolio-5.png" class="w-100 rounded-4" alt>')
+                                }
+                            </script>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
