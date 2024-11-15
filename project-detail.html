@@ -40,10 +40,20 @@
             <div class="breadCrum">
                 <a href="index.html">home</a>
                 <i class="fa-solid fa-arrow-right-long"></i>
-                <a href="index.html">portfolio</a>
+                <a href="index.html#portfolio">portfolio</a>
+                <i class="fa-solid fa-arrow-right-long"></i>
+                <a href="#">project detail</a>
                 <i class="fa-solid fa-arrow-right-long"></i>
                 <span>
-                    project detail
+                    <script>
+                        if (url == "lawyer") {
+                            document.write('CoreLaw');
+                        } else if (url == "lab") {
+                            document.write('Online Laboratory')
+                        } else if (url == "e-com") {
+                            document.write('EverClose Company')
+                        }
+                    </script>
                 </span>
             </div>
         </div>
