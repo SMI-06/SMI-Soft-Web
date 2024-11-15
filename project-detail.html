@@ -10,7 +10,12 @@
 </head>
 
 <script>
-    var url = new URLSearchParams(window.location.search).get('id')
+    const checkId = new URLSearchParams(window.location.search);
+    if (!checkId.has('id') || !checkId.get('id')) {
+        window.location.href = 'index.html';
+    } else {
+        var url = new URLSearchParams(window.location.search).get('id')
+    }
 </script>
 
 <body>
@@ -172,43 +177,38 @@
                     </div>
                     <hr>
                     <p class="para left mt-5">
-                        Corelaw is an advanced Lawyer Management System
-                        developed in PHP, designed to revolutionize the
-                        way clients and lawyers interact. This platform
-                        provides a seamless and efficient solution for
-                        managing legal services. Clients can easily
-                        communicate with lawyers, discuss legal matters, and
-                        hire the right professional for their needs. The
-                        system allows users to book, reschedule, and
-                        manage appointments directly through the platform,
-                        saving time and effort.
+                        <script>
+                            if (url == "lawyer") {
+                                document.write('  Corelaw is an advanced Lawyer Management System developed in PHP, designed to revolutionize the way clients and lawyers interact. This platform provides a seamless and efficient solution for managing legal services. Clients can easily communicate with lawyers, discuss legal matters, and hire the right professional for their needs. The system allows users to book, reschedule, and manage appointments directly through the platform, saving time and effort.');
+                            } else if (url == "lab") {
+                                document.write('Online Laboratory is an innovative web-based software designed to modernize and simplify how laboratories operate. This advanced platform leverages the latest technologies to streamline processes, improve accuracy, and enhance communication between lab professionals and their clients. With a secure and user-friendly interface, users can easily book lab tests, view results online, and track their medical records—all from the comfort of their home.')
+                            } else if (url == "e-com") {
+                                document.write('EverClose Company is an innovative e-commerce platform brought to life by the expert design team at SMI SOFTS. The platform’s UI/UX design was carefully crafted to deliver a visually appealing, user-friendly, and seamless shopping experience. From intuitive navigation to clean layouts, every element is designed to captivate users and guide them effortlessly through the website.')
+                            }
+                        </script>
                     </p>
 
                     <p class="para left">
-                        For lawyers, Corelaw offers a robust tool to manage
-                        client communications, appointments, and
-                        cases in one organized dashboard. It enhances
-                        workflow efficiency, allowing legal professionals
-                        to focus more on their cases while reducing
-                        administrative burden. Lawyers can keep track of
-                        their schedules, respond to client inquiries, and
-                        streamline their practice through this
-                        easy-to-use system.
+                        <script>
+                            if (url == "lawyer") {
+                                document.write(' For lawyers, Corelaw offers a robust tool to manage client communications, appointments, and cases in one organized dashboard. It enhances workflow efficiency, allowing legal professionals to focus more on their cases while reducing administrative burden. Lawyers can keep track of their schedules, respond to client inquiries, and streamline their practice through this easy-to-use system.');
+                            } else if (url == "lab") {
+                                document.write('For laboratories, Online Laboratory provides powerful tools to efficiently manage appointments, track samples, and automate report generation. By reducing manual tasks and minimizing errors, this software helps labs boost productivity and focus on delivering exceptional services.')
+                            } else if (url == "e-com") {
+                                document.write('The responsive design ensures consistent performance across all devices, making it easy for customers to browse and shop whether they’re on a desktop, tablet, or mobile. Attention to detail in color schemes, typography, and layout enhances the overall aesthetic while maintaining a professional and engaging feel.')
+                            }
+                        </script>
                     </p>
                     <p class="para">
-                        Corelaw is designed with a user-friendly interface,
-                        ensuring both clients and lawyers can
-                        navigate the platform with ease. The system is also
-                        highly secure, protecting sensitive
-                        information and providing peace of mind for both
-                        parties. With Corelaw, managing legal processes
-                        becomes smoother, more organized, and faster,
-                        ensuring a productive and professional experience
-                        for everyone involved.
-                        <br><br>
-                        Whether you're seeking legal advice or offering
-                        legal services, Corelaw is the perfect platform
-                        to facilitate a hassle-free connection.
+                        <script>
+                            if (url == "lawyer") {
+                                document.write('Corelaw is designed with a user-friendly interface, ensuring both clients and lawyers can navigate the platform with ease. The system is also highly secure, protecting sensitive information and providing peace of mind for both parties. With Corelaw, managing legal processes becomes smoother, more organized, and faster, ensuring a productive and professional experience for everyone involved. <br><br> Whether you are seeking legal advice or offering legal services, Corelaw is the perfect platform to facilitate a hassle-free connection.');
+                            } else if (url == "lab") {
+                                document.write('The platform is optimized for responsiveness, offering a seamless experience across devices, including desktops, tablets, and smartphones. Built with top-notch security features, it ensures the confidentiality and safety of sensitive health data, making it a trusted solution for both labs and patients. <br><br> Whether you are a lab looking to optimize operations or an individual in need of quick and reliable testing services, Online Laboratory is the perfect solution. Experience the future of lab management today with this efficient and secure software designed to meet the needs of the modern healthcare industry.')
+                            } else if (url == "e-com") {
+                                document.write('At SMI SOFTS, we believe great design drives great experiences, and EverClose is a perfect example of how thoughtful UI/UX can transform online shopping. Explore the platform at <a href="https://everclosecompany.com/">everclosecompany.com</a> and see how SMI SOFTS redefines digital excellence.')
+                            }
+                        </script>
                     </p>
 
                     <div class="row mt-4">
@@ -294,9 +294,9 @@
                         if (url == "lawyer") {
                             document.write('<a href="project-detail.html?id=e-com">');
                         } else if (url == "lab") {
-                            document.write('<a href="project-detail.html?id=e-com">')
-                        } else if (url == "e-com") {
                             document.write('<a href="project-detail.html?id=lawyer">')
+                        } else if (url == "e-com") {
+                            document.write('<a href="project-detail.html?id=lab">')
                         }
                     </script>
                     <div class="d-flex align-content-center gap-2">
@@ -307,9 +307,9 @@
                                     if (url == "lawyer") {
                                         document.write('EverClose Company');
                                     } else if (url == "lab") {
-                                        document.write('EverClose Company')
-                                    } else if (url == "e-com") {
                                         document.write('Corelaw')
+                                    } else if (url == "e-com") {
+                                        document.write('Online Laboratory')
                                     }
                                 </script>
                             </h4>
@@ -320,9 +320,9 @@
                                     if (url == "lawyer") {
                                         document.write('<img src="assets/images/projects-images/e-com-1.png" class="w-100 rounded-4" alt>');
                                     } else if (url == "lab") {
-                                        document.write('<img src="assets/images/projects-images/e-com-1.png" class="w-100 rounded-4" alt>')
-                                    } else if (url == "e-com") {
                                         document.write('<img src="assets/images/projects-images/law-1.png" class="w-100 rounded-4" alt>')
+                                    } else if (url == "e-com") {
+                                        document.write('<img src="assets/images/projects-images/lab-1.png" class="w-100 rounded-4" alt>')
                                     }
                                 </script>
                                 <span>
@@ -340,7 +340,7 @@
                         } else if (url == "lab") {
                             document.write('<a href="project-detail.html?id=e-com">')
                         } else if (url == "e-com") {
-                            document.write('<a href="project-detail.html?id=lab">')
+                            document.write('<a href="project-detail.html?id=lawyer">')
                         }
                     </script>
                     <div class="d-flex align-content-center gap-2 flex-row-reverse">
@@ -351,9 +351,9 @@
                                     if (url == "lawyer") {
                                         document.write('Online Laboratory');
                                     } else if (url == "lab") {
-                                        document.write('Corelaw')
+                                        document.write('EverClose Company')
                                     } else if (url == "e-com") {
-                                        document.write('Online Laboratory')
+                                        document.write('Corelaw')
                                     }
                                 </script>
                             </h4>
@@ -364,9 +364,9 @@
                                     if (url == "lawyer") {
                                         document.write('<img src="assets/images/projects-images/lab-1.png" class="w-100 rounded-4" alt>');
                                     } else if (url == "lab") {
-                                        document.write('<img src="assets/images/projects-images/law-1.png" class="w-100 rounded-4" alt>')
+                                        document.write('<img src="assets/images/projects-images/e-com-1.png" class="w-100 rounded-4" alt>')
                                     } else if (url == "e-com") {
-                                        document.write('<img src="assets/images/projects-images/lab-1.png" class="w-100 rounded-4" alt>')
+                                        document.write('<img src="assets/images/projects-images/law-1.png" class="w-100 rounded-4" alt>')
                                     }
                                 </script>
                                 <span>
