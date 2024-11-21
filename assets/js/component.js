@@ -23,7 +23,7 @@ if (document.querySelector("header")) {
         <div class="container">
         <a href="index.html" class="logo hvr-buzz-out">
             <div class="logoContainer">
-                <img src="assets/images/logo.png" alt="">
+                <img src="assets/images/logo.png" loading="lazy" alt="">
             </div>
         </a>
         <button class="btn btn-primary buttonToggle" onclick="menuToggle()">
@@ -32,7 +32,7 @@ if (document.querySelector("header")) {
         <nav>
             <a href="index.html" class="nav-item hvr-buzz-out home"> <span>home</span></a>
             <a href="index.html#about" class="nav-item hvr-buzz-out home"> <span>about</span></a>
-            <a href="index.html#portfolio" class="nav-item hvr-buzz-out home"> <span>portfolio</span></a>
+            <a href="portfolio.html" class="nav-item hvr-buzz-out portfolio"> <span>portfolio</span></a>
             <a href="index.html#services" class="nav-item hvr-buzz-out home"> <span>services</span></a>
             <a href="team.html" class="nav-item hvr-buzz-out home"> <span>team</span></a>
         </nav>
@@ -71,7 +71,7 @@ if (document.querySelector("footer")) {
     <div class="container py-3">
                 <div class="logoContainer">
                     <a href="index.html" class="logo">
-                        <img src="assets/images/logo.png" alt>
+                        <img src="assets/images/logo.png" loading="lazy" alt>
                     </a>
                     <div class="contact">
                         <div class="icon">

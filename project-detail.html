@@ -1,90 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMI Softs | Our Project</title>
-    
-    <meta name="description" content="Let's Transform Your Vision into Reality">
-        
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="SMI Softs">
-    <meta property="og:description" content="Let's Transform Your Vision into Reality">
-    <meta property="og:image" content="https://smi-softs.netlify.app/assets/images/favicon.png">
-    <meta property="og:url" content="https://smi-softs.netlify.app/">
-    <meta property="og:type" content="website">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SMI Softs | Our Project</title>
 
-    <!-- Style Links -->
-    <link rel="shortcut icon" href="assets/images/favicon.png">
-    <link rel="stylesheet" href="assets/css/config.css">
-</head>
+        <meta name="description"
+            content="Let's Transform Your Vision into Reality">
 
-<script>
-    const checkId = new URLSearchParams(window.location.search);
-    if (!checkId.has('id') || !checkId.get('id')) {
-        window.location.href = 'index.html';
-    } else {
-        var url = new URLSearchParams(window.location.search).get('id')
-    }
-</script>
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="SMI Softs">
+        <meta property="og:description"
+            content="Let's Transform Your Vision into Reality">
+        <meta property="og:image"
+            content="https://smi-softs.netlify.app/assets/images/favicon.png">
+        <meta property="og:url" content="https://smi-softs.netlify.app/">
+        <meta property="og:type" content="website">
 
-<body>
-    <!-- <div class="preloader active">
+        <!-- Style Links -->
+        <link rel="shortcut icon" href="assets/images/favicon.png">
+        <link rel="stylesheet" href="assets/css/config.css">
+    </head>
+
+    <body>
+        <!-- <div class="preloader active">
         <img src="assets/images/loader.gif" alt>
     </div> -->
 
-    <div class="whatsappChat"></div>
+        <div class="whatsappChat"></div>
 
-    <div class="floatingAction">
-        <div class="innerFloating"><i class="fa-solid fa-arrow-down"></i></div>
-    </div>
-
-    <div class="top"></div>
-
-    <header data-active="about,blog"></header>
-
-    <section class="innerBanner">
-        <div class="container">
-            <div class="pageName">project detail</div>
-            <h1>Insights Of Exploring Technology</h1>
-            <div class="breadCrum">
-                <a href="index.html">home</a>
-                <i class="fa-solid fa-arrow-right-long"></i>
-                <a href="index.html#portfolio">portfolio</a>
-                <i class="fa-solid fa-arrow-right-long"></i>
-                <span>
-                    <script>
-                        if (url == "lawyer") {
-                            document.write('CoreLaw');
-                        } else if (url == "lab") {
-                            document.write('Online Laboratory')
-                        } else if (url == "e-com") {
-                            document.write('EverClose Company')
-                        }
-                    </script>
-                </span>
-            </div>
+        <div class="floatingAction">
+            <div class="innerFloating"><i
+                    class="fa-solid fa-arrow-down"></i></div>
         </div>
-    </section>
 
-    <section class="blogSection py-5">
-        <div class="container">
-            <div class="swiper myProjects mt-3 shadow-lg rounded-4">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide rounded-4 overflow-hidden">
-                        <script>
-                            if (url == "lawyer") {
-                                document.write('<img src="assets/images/projects-images/law-1.png" class="w-100 rounded-4" alt>');
-                            } else if (url == "lab") {
-                                document.write('<img src="assets/images/projects-images/Lab-1.png" class="w-100 rounded-4" alt>')
-                            } else if (url == "e-com") {
-                                document.write('<img src="assets/images/projects-images/e-com-1.png" class="w-100 rounded-4" alt>')
-                            }
-                        </script>
-                    </div>
-                    <div class="swiper-slide rounded-4 overflow-hidden">
-                        <script>
+        <div class="top"></div>
+
+        <header data-active="portfolio"></header>
+
+        <section class="innerBanner">
+            <div class="container">
+                <div class="pageName">project detail</div>
+                <h1 id="pNameTitle">Insights Of Exploring Technology</h1>
+                <div class="breadCrum">
+                    <a href="index.html">home</a>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                    <a href="portfolio.html">portfolio</a>
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                    <span id="pName"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="blogSection py-5">
+            <div class="container">
+                <div class="swiper myProjects mt-3 shadow-lg rounded-4">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide rounded-4 overflow-hidden">
+                            <img src="assets/images/projects/law-1.png"
+                                class="w-100 rounded-4" loading="lazy" alt>
+                        </div>
+                        <div class="swiper-slide rounded-4 overflow-hidden">
+                            <script>
                             if (url == "lawyer") {
                                 document.write('<img src="assets/images/projects-images/law-2.jpg" class="w-100 rounded-4" alt>');
                             } else if (url == "lab") {
@@ -93,9 +71,9 @@
                                 document.write('<img src="assets/images/projects-images/e-com-2.jpg" class="w-100 rounded-4" alt>')
                             }
                         </script>
-                    </div>
-                    <div class="swiper-slide rounded-4 overflow-hidden">
-                        <script>
+                        </div>
+                        <div class="swiper-slide rounded-4 overflow-hidden">
+                            <script>
                             if (url == "lawyer") {
                                 document.write('<img src="assets/images/projects-images/law-3.jpg" class="w-100 rounded-4" alt>');
                             } else if (url == "lab") {
@@ -104,9 +82,9 @@
                                 document.write('<img src="assets/images/projects-images/e-com-3.jpg" class="w-100 rounded-4" alt>')
                             }
                         </script>
-                    </div>
-                    <div class="swiper-slide rounded-4 overflow-hidden">
-                        <script>
+                        </div>
+                        <div class="swiper-slide rounded-4 overflow-hidden">
+                            <script>
                             if (url == "lawyer") {
                                 document.write('<img src="assets/images/projects-images/law-4.jpg" class="w-100 rounded-4" alt>');
                             } else if (url == "lab") {
@@ -115,9 +93,9 @@
                                 document.write('<img src="assets/images/projects-images/e-com-4.jpg" class="w-100 rounded-4" alt>')
                             }
                         </script>
-                    </div>
-                    <div class="swiper-slide rounded-5 overflow-hidden">
-                        <script>
+                        </div>
+                        <div class="swiper-slide rounded-5 overflow-hidden">
+                            <script>
                             if (url == "lawyer") {
                                 document.write('<img src="assets/images/projects-images/law-5.jpg" class="w-100 rounded-4" alt>');
                             } else if (url == "lab") {
@@ -126,77 +104,33 @@
                                 document.write('<img src="assets/images/projects-images/e-com-5.jpg" class="w-100 rounded-4" alt>')
                             }
                         </script>
+                        </div>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-8 col-md-8 mb-3 blogContainer">
-                    <script>
-                        if (url == "lawyer") {
-                            document.write('<div class="tag">Web App Development</div>');
-                        } else if (url == "lab") {
-                            document.write('<div class="tag">Software Development</div>')
-                        } else if (url == "e-com") {
-                            document.write('<div class="tag">Web Design</div>')
-                        }
-                    </script>
-                    <h1 class="title titleGrand">
-                        <script>
-                            if (url == "lawyer") {
-                                document.write('CoreLaw');
-                            } else if (url == "lab") {
-                                document.write('Online Laboratory')
-                            } else if (url == "e-com") {
-                                document.write('EverClose Company')
-                            }
-                        </script>
-                    </h1>
-                    <hr>
-                    <div class="row profileInfo">
-                        <div class="col-lg-6 col-md-6 user">
-                            <img src="assets/images/testimonials.png" alt>
-                            By, <a href="#">SMI SOFTS</a>
+                <div class="row mt-5">
+                    <div class="col-lg-8 col-md-8 mb-3 blogContainer">
+                        <div class="tag" id="pCategory">Web App
+                            Development</div>
+                        <h1 class="title titleGrand"></h1>
+                        <hr>
+                        <div class="row profileInfo">
+                            <div class="col-lg-6 col-md-6 user">
+                                <img src="assets/images/testimonials.png" alt>
+                                By, <a href="#">SMI SOFTS</a>
+                            </div>
+                            <div class="col-lg-6 col-md-6 status">
+                                <span id="pDate"><i
+                                        class="fa-solid fa-clock"></i></span>
+                                <span id="pViews"><i
+                                        class="fa-solid fa-fire"></i></span>
+                                <span><i class="fa-solid fa-comments"></i>50
+                                    comments</span>
+                            </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 status">
-                            <span><i class="fa-solid fa-clock"></i>
-                                <script>
-                                    if (url == "lawyer") {
-                                        document.write('21 Fab, 2023');
-                                    } else if (url == "lab") {
-                                        document.write('10 Dec 2023')
-                                    } else if (url == "e-com") {
-                                        document.write('10 Jan, 2023')
-                                    }
-                                </script>
-                            </span>
-                            <span><i class="fa-solid fa-fire"></i>
-                                <script>
-                                    if (url == "lawyer") {
-                                        document.write('1.5K View');
-                                    } else if (url == "lab") {
-                                        document.write('50 View')
-                                    } else if (url == "e-com") {
-                                        document.write('5K View')
-                                    }
-                                </script>
-                            </span>
-                            <span><i class="fa-solid fa-comments"></i>
-                                <script>
-                                    if (url == "lawyer") {
-                                        document.write('50 Comment');
-                                    } else if (url == "lab") {
-                                        document.write('10 Comment')
-                                    } else if (url == "e-com") {
-                                        document.write('1000 Comment')
-                                    }
-                                </script>
-                            </span>
-                        </div>
-                    </div>
-                    <hr>
-                    <p class="para left mt-5">
-                        <script>
+                        <hr>
+                        <p class="para left mt-5" id="pDesc">
+                            <!-- <script>
                             if (url == "lawyer") {
                                 document.write('  Corelaw is an advanced Lawyer Management System developed in PHP, designed to revolutionize the way clients and lawyers interact. This platform provides a seamless and efficient solution for managing legal services. Clients can easily communicate with lawyers, discuss legal matters, and hire the right professional for their needs. The system allows users to book, reschedule, and manage appointments directly through the platform, saving time and effort.');
                             } else if (url == "lab") {
@@ -204,10 +138,10 @@
                             } else if (url == "e-com") {
                                 document.write('EverClose Company is an innovative e-commerce platform brought to life by the expert design team at SMI SOFTS. The platform’s UI/UX design was carefully crafted to deliver a visually appealing, user-friendly, and seamless shopping experience. From intuitive navigation to clean layouts, every element is designed to captivate users and guide them effortlessly through the website.')
                             }
-                        </script>
-                    </p>
+                        </script> -->
+                        </p>
 
-                    <p class="para left">
+                        <!-- <p class="para left">
                         <script>
                             if (url == "lawyer") {
                                 document.write(' For lawyers, Corelaw offers a robust tool to manage client communications, appointments, and cases in one organized dashboard. It enhances workflow efficiency, allowing legal professionals to focus more on their cases while reducing administrative burden. Lawyers can keep track of their schedules, respond to client inquiries, and streamline their practice through this easy-to-use system.');
@@ -228,177 +162,91 @@
                                 document.write('At SMI SOFTS, we believe great design drives great experiences, and EverClose is a perfect example of how thoughtful UI/UX can transform online shopping. Explore the platform at <a href="https://everclosecompany.com/">everclosecompany.com</a> and see how SMI SOFTS redefines digital excellence.')
                             }
                         </script>
-                    </p>
+                    </p> -->
 
-                    <div class="row mt-4">
-                        <div class="col-lg-8 col-md-8 mb-3 tags">
-                            <span>tag:</span>
-                            <script>
-                                if (url == "lawyer") {
-                                    document.write('<a href="#">PDO-PHP</a>');
-                                    document.write('<a href="#">Design</a>');
-                                    document.write('<a href="#">Seo</a>');
-                                    document.write('<a href="#">development</a>');
-                                    // document.write('<a href="#">PDO-PHP</a>');
-                                } else if (url == "lab") {
-                                    document.write('<a href="#">Core PHP</a>');
-                                    document.write('<a href="#">Software</a>');
-                                    document.write('<a href="#">UI/UX Design</a>');
-                                    document.write('<a href="#">development</a>');
-                                } else if (url == "e-com") {
-                                    document.write('<a href="#">Html 5</a>');
-                                    document.write('<a href="#">Web Design</a>');
-                                    document.write('<a href="#">UI/UX Design</a>');
-                                    document.write('<a href="#">development</a>');
-                                }
-                            </script>
-                        </div>
-                        <div class="col-lg-4 col-md-4 mb-3 social">
-                            <span>share on:</span>
-                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 mb-3 sidePane">
-                    <div class="card mb-4">
-                        <h1>category</h1>
-                        <hr>
-                        <div class="links">
-                            <a href="#">
-                                <span>web design</span>
-                                <span>(30)</span>
-                            </a>
-                            <a href="#">
-                                <span>app development</span>
-                                <span>(18)</span>
-                            </a>
-                            <a href="#">
-                                <span>software development</span>
-                                <span>(21)</span>
-                            </a>
-                            <a href="#">
-                                <span>motion graphics</span>
-                                <span>(25)</span>
-                            </a>
-                            <a href="#">
-                                <span>UI/UX design</span>
-                                <span>(29)</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card mb-4">
-                        <h1>all tags</h1>
-                        <hr>
-                        <div class="tags">
-                            <a href="#" class="active">website</a>
-                            <a href="#">web design</a>
-                            <a href="#">development</a>
-                            <a href="#">graphic design</a>
-                            <a href="#">graphic</a>
-                            <a href="#">UI/UX design</a>
-                            <a href="#">activities</a>
-                            <a href="#">software design</a>
-                            <a href="#">3D design</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="row paginations">
-                <div class="col-lg-5 col-md-5 my-3 prev">
-                    <script>
-                        if (url == "lawyer") {
-                            document.write('<a href="project-detail.html?id=e-com">');
-                        } else if (url == "lab") {
-                            document.write('<a href="project-detail.html?id=lawyer">')
-                        } else if (url == "e-com") {
-                            document.write('<a href="project-detail.html?id=lab">')
-                        }
-                    </script>
-                    <div class="d-flex align-content-center gap-2">
-                        <div class="group">
-                            <span>previous</span>
-                            <h4>
-                                <script>
-                                    if (url == "lawyer") {
-                                        document.write('EverClose Company');
-                                    } else if (url == "lab") {
-                                        document.write('Corelaw')
-                                    } else if (url == "e-com") {
-                                        document.write('Online Laboratory')
-                                    }
-                                </script>
-                            </h4>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <div class="imageContainer">
-                                <script>
-                                    if (url == "lawyer") {
-                                        document.write('<img src="assets/images/projects-images/e-com-1.png" class="w-100 rounded-4" alt>');
-                                    } else if (url == "lab") {
-                                        document.write('<img src="assets/images/projects-images/law-1.png" class="w-100 rounded-4" alt>')
-                                    } else if (url == "e-com") {
-                                        document.write('<img src="assets/images/projects-images/lab-1.png" class="w-100 rounded-4" alt>')
-                                    }
-                                </script>
-                                <span>
-                                    <i class="fa-solid fa-arrow-left"></i>
-                                </span>
+                        <div class="row mt-4">
+                            <div class="col-lg-8 col-md-8 mb-3 tags" id="pTags">
+                                <span>tag:</span>
+                            </div>
+                            <div class="col-lg-4 col-md-4 mb-3 social">
+                                <span>share on:</span>
+                                <a href="#"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i
+                                        class="fa-brands fa-pinterest-p"></i></a>
+                                <a href="#"><i
+                                        class="fa-brands fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
-                    </a>
-                </div>
-                <div class="col-lg-5 col-md-5 my-3 next">
-                    <script>
-                        if (url == "lawyer") {
-                            document.write('<a href="project-detail.html?id=lab">');
-                        } else if (url == "lab") {
-                            document.write('<a href="project-detail.html?id=e-com">')
-                        } else if (url == "e-com") {
-                            document.write('<a href="project-detail.html?id=lawyer">')
-                        }
-                    </script>
-                    <div class="d-flex align-content-center gap-2 flex-row-reverse">
-                        <div class="group">
-                            <span>next</span>
-                            <h4>
-                                <script>
-                                    if (url == "lawyer") {
-                                        document.write('Online Laboratory');
-                                    } else if (url == "lab") {
-                                        document.write('EverClose Company')
-                                    } else if (url == "e-com") {
-                                        document.write('Corelaw')
-                                    }
-                                </script>
-                            </h4>
+                    <div class="col-lg-4 col-md-4 mb-3 sidePane">
+                        <div class="card mb-4">
+                            <h1>category</h1>
+                            <hr>
+                            <div class="links"></div>
                         </div>
-                        <div class="d-flex align-items-center">
-                            <div class="imageContainer">
-                                <script>
-                                    if (url == "lawyer") {
-                                        document.write('<img src="assets/images/projects-images/lab-1.png" class="w-100 rounded-4" alt>');
-                                    } else if (url == "lab") {
-                                        document.write('<img src="assets/images/projects-images/e-com-1.png" class="w-100 rounded-4" alt>')
-                                    } else if (url == "e-com") {
-                                        document.write('<img src="assets/images/projects-images/law-1.png" class="w-100 rounded-4" alt>')
-                                    }
-                                </script>
-                                <span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </span>
+                        <div class="card mb-4">
+                            <h1>using technologies</h1>
+                            <hr>
+                            <div class="skillsContainer" id="pTech">
                             </div>
                         </div>
                     </div>
-                    </a>
                 </div>
-            </div>
-            <hr>
-            <!-- <div class="row comments commentForm my-5">
+                <hr>
+                <div class="row paginations">
+                    <div class="col-lg-5 col-md-5 my-3 prev">
+                        <a href="project-detail.html?id=e-com">
+                            <div class="d-flex align-content-center gap-2">
+                                <div class="group">
+                                    <span>previous</span>
+                                    <h4>
+                                        EverClose Company
+                                    </h4>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="imageContainer">
+                                        <img
+                                            src="assets/images/projects-images/e-com-1.png"
+                                            class="w-100 rounded-4" alt>
+                                        <span>
+                                            <i
+                                                class="fa-solid fa-arrow-left"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-5 col-md-5 my-3 next">
+                        <a href="project-detail.html?id=lab">
+                            <div
+                                class="d-flex align-content-center gap-2 flex-row-reverse">
+                                <div class="group">
+                                    <span>next</span>
+                                    <h4>
+                                        Online Laboratory
+                                    </h4>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="imageContainer">
+                                        <img
+                                            src="assets/images/projects-images/lab-1.png"
+                                            class="w-100 rounded-4" alt>
+                                        <span>
+                                            <i
+                                                class="fa-solid fa-arrow-right"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <!-- <div class="row comments commentForm my-5">
                 <div class="col-lg-8 col-md-8 mb-3">
                     <h1 class="mb-5">2 comment</h1>
                     <div class="row">
@@ -473,51 +321,138 @@
                     </div>
                 </div>
             </div> -->
-            <div class="row commentForm mt-5">
-                <form action method="post" class="col-lg-8 col-md-8 mb-3">
-                    <h1 class="mb-4">leave a comment</h1>
-                    <input type="text" class="mb-4" name="name" minlength="3" maxlength="20"
-                        placeholder="Enter your name" required>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 mb-4">
-                            <input type="email" name="email" maxlength="40" placeholder="Enter your email" required>
+                <div class="row commentForm mt-5 d-none">
+                    <form action method="post" class="col-lg-8 col-md-8 mb-3">
+                        <h1 class="mb-4">leave a comment</h1>
+                        <input type="text" class="mb-4" name="name"
+                            minlength="3" maxlength="20"
+                            placeholder="Enter your name" required>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 mb-4">
+                                <input type="email" name="email" maxlength="40"
+                                    placeholder="Enter your email" required>
+                            </div>
+                            <div class="col-lg-6 col-md-6 mb-4">
+                                <input type="text" name="subject" minlength="5"
+                                    maxlength="20" placeholder="Subject"
+                                    required>
+                            </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 mb-4">
-                            <input type="text" name="subject" minlength="5" maxlength="20" placeholder="Subject"
-                                required>
+                        <div>
+                            <textarea name="message" class="mb-4" rows="5"
+                                maxlength="1000" placeholder="Your message"
+                                required></textarea>
                         </div>
-                    </div>
-                    <div>
-                        <textarea name="message" class="mb-4" rows="5" maxlength="1000" placeholder="Your message"
-                            required></textarea>
-                    </div>
-                    <button class="btnPrimary">Post a Comment</button>
-                </form>
+                        <button class="btnPrimary">Post a Comment</button>
+                    </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="callToActionSection">
-        <div class="container threebox2 py-5">
-            <h2>work with us</h2>
-            <h1>let's talk</h1>
-            <a href="contact.html">
-                <span>contact with us.</span>
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-        </div>
-    </section>
+        <section class="callToActionSection">
+            <div class="container threebox2 py-5">
+                <h2>work with us</h2>
+                <h1>let's talk</h1>
+                <a href="contact.html">
+                    <span>contact with us.</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
 
-    <footer></footer>
+        <footer></footer>
 
-</body>
-<script src="assets/js/vanilla-tilt.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/swiper-bundle.min.js"></script>
-<script src="assets/js/component.js"></script>
-<script src="assets/js/script.whatsapp.js"></script>
-<script src="assets/js/script.js"></script>
-<script>
+    </body>
+    <script src="assets/js/vanilla-tilt.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/projects.script.js"></script>
+    <script src="assets/js/component.js"></script>
+    <script src="assets/js/script.whatsapp.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+    const checkId = new URLSearchParams(window.location.search);
+    let id;
+    if (!checkId.has('id') || !checkId.get('id')) {
+        window.location.href = 'portfolio.html';
+    } else {
+        id = parseInt(checkId.get('id')) - 1;
+        if(!((id+1) >= 1 && (id+1) <= projects.length)){
+            window.location.href = 'portfolio.html';
+        }
+    }
+    document.title = `SMI Softs | ${projects[id].pName}`;
+    document.querySelector("#pNameTitle").innerHTML = projects[id].pName;
+    document.querySelector("#pName").innerHTML = projects[id].pName;
+    document.querySelector("#pCategory").innerHTML = projects[id].pCategory;
+    document.querySelector(".titleGrand").innerHTML = projects[id].pName;
+    document.querySelector("#pDate").innerHTML += projects[id].pDate;
+    document.querySelector("#pViews").innerHTML += projects[id].pViews+" Views";
+    document.querySelector("#pDesc").innerHTML += projects[id].pDesc;
+
+    if(document.querySelector(".sidePane .links")){
+        document.querySelector(".sidePane .links").innerHTML = "";
+        for (let i = 0; i < categories.length; i++) {
+            let count = 0;
+            for (let j = 0; j < projects.length; j++) {
+                if(projects[j].pCategory === categories[i]){
+                    count++;
+                }
+            }
+            document.querySelector(".sidePane .links").innerHTML += `
+                <a href="portfolio.html?filter=${categories[i]}">
+                    <span>${categories[i]}</span>
+                    <span>(${count.toString().padStart(2, '0')})</span>
+                </a>
+            `;
+        }
+    }
+
+    if(document.querySelector("#pTags")){
+        let tech = JSON.parse(JSON.stringify(projects[id].pTech));
+        for (let i = 0; i < tech.length; i++) {
+            document.querySelector("#pTags").innerHTML += `
+                <a href="#">${skills[tech[i]].name}</a>
+            `;
+        }
+    }
+
+    if(document.querySelector(".sidePane #pTech")){
+        let tech = JSON.parse(JSON.stringify(projects[id].pTech));
+        document.querySelector(".sidePane #pTech").innerHTML = "";
+        for (let i = 0; i < tech.length; i++) {
+            document.querySelector(".sidePane #pTech").innerHTML += `
+                    <div class="col-3 skill">
+                        <img src="assets/images/skills/${skills[tech[i]].image}" loading="lazy" alt>
+                        <div class="skillName">${skills[tech[i]].name}</div>
+                    </div>
+                `;
+        }
+        VanillaTilt.init(document.querySelectorAll(".skill"), {
+            max: 20,
+            speed: 1200,
+        });
+    }
+
+    // Calculate prev and next indices
+    const prevIndex = (id - 1 + projects.length) % projects.length;
+    const nextIndex = (id + 1) % projects.length;
+
+    // Get prev and next projects
+    const prevProject = projects[prevIndex];
+    const nextProject = projects[nextIndex];
+
+    // Update prev navigation
+    document.querySelector('.prev a').setAttribute('href', `project-detail.html?id=${prevIndex + 1}`);
+    document.querySelector('.prev h4').textContent = prevProject.pName;
+    document.querySelector('.prev img').setAttribute('src', `assets/images/projects/${prevProject.pImage}`);
+
+    // Update next navigation
+    document.querySelector('.next a').setAttribute('href', `project-detail.html?id=${nextIndex + 1}`);
+    document.querySelector('.next h4').textContent = nextProject.pName;
+    document.querySelector('.next img').setAttribute('src', `assets/images/projects/${nextProject.pImage}`);
+</script>
+    <script>
     var swiper2 = new Swiper(".myProjects", {
         effect: "coverflow",
         grabCursor: true,
