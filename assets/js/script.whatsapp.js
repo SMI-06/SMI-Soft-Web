@@ -32,7 +32,7 @@ if(document.querySelector(".whatsappChat")){
         if (message.length == "") {
             alert("Please! Enter Your Message in WhatsApp Chat Box");
         } else {
-            window.open("https://web.whatsapp.com/send?phone=923410292698&text=" + message);
+            window.open("https://web.whatsapp.com/send?phone=923010247722&text=" + message);
         }
     }
     window.addEventListener("scroll", function () {
