@@ -56,9 +56,9 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-4 col-md-12 mb-3 sidePane">
                         <div class="card mb-4">
-                            <form method="post" action class="inputGroup">
+                            <form method="post" action="" class="inputGroup" onsubmit="searchProjects(event)">
                                 <input type="text" maxlength="30"
-                                    placeholder="Search Here" required>
+                                    placeholder="Search Here" id="searchInput" autocomplete="off" onkeyup="searchProjects(event)"  required>
                                 <button>search</button>
                             </form>
                         </div>
@@ -81,6 +81,10 @@
                             </li>
                         </ul>
                         <div class="row g-4" id="portfolioContainer"></div>
+                        <div class="d-flex justify-content-center mt-5 mb-4">
+                            <div class="paginations" id="paginationContainer">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

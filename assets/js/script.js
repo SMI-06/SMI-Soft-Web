@@ -81,7 +81,7 @@ if (document.querySelector("#portfolio #portfolioContainer")) {
                       <div class="imageContainer">
                           <img
                               src="assets/images/projects/${
-                                projects[i].pImage
+                                projects[i].pImage[0]
                               }" loading="lazy"
                               alt>
                       </div>
@@ -90,7 +90,7 @@ if (document.querySelector("#portfolio #portfolioContainer")) {
                       }" class="category">${projects[i].pCategory}</a>
                       <div class="content">
                           <div class="group">
-                              <span>Sep 20, 2023</span>
+                              <span>${projects[i].pDate}</span>
                               <a href="#">comment (3)</a>
                           </div>
                           <a href="project-detail.html?id=${i + 1}"
@@ -123,174 +123,256 @@ if (document.querySelector("#portfolio #portfolioContainer")) {
   }
 }
 
+let currentPage = 1;
+const itemsPerPage = 9;
+
 if (document.querySelector(".portfolioSection")) {
   const checkFilter = new URLSearchParams(window.location.search);
-  if (!checkFilter.has('filter') || !checkFilter.get('filter')) {
+  if (!checkFilter.has("filter") || !checkFilter.get("filter")) {
     filterData("all");
-  } else if (!categories.includes(checkFilter.get('filter'))) {
-    window.location.href = 'portfolio.html';
-  }
-
-  for (let i = 0; i < categories.length; i++) {
-    if (categories[i] == checkFilter.get("filter")) {
+    categories.forEach((category) => {
+      const isActive = category === checkFilter.get("filter");
       document.querySelector(".portfolioSection .filters").innerHTML += `
-        <button class="nav-link active" onclick="filterData('${categories[i]}')" type="button" data-bs-toggle="pill">${categories[i]}</button>
+        <button class="nav-link ${isActive ? "active active-filter" : ""}" 
+                onclick="applyFilter('${category}')" 
+                type="button" 
+                data-bs-toggle="pill">${category}</button>
       `;
-      document.querySelector(".portfolioSection .filters .allBtn").classList.remove("active");
-      filterData(`${categories[i]}`);
-    } else {
+    });
+  } else if (!categories.includes(checkFilter.get("filter"))) {
+    window.location.href = "portfolio.html";
+  } else {
+    document.querySelector(".portfolioSection .filters .allBtn").classList.remove("active");
+    categories.forEach((category) => {
+      const isActive = category === checkFilter.get("filter");
       document.querySelector(".portfolioSection .filters").innerHTML += `
-        <button class="nav-link" onclick="filterData('${categories[i]}')" type="button" data-bs-toggle="pill">${categories[i]}</button>
+        <button class="nav-link ${isActive ? "active active-filter" : ""}" 
+                onclick="applyFilter('${category}')" 
+                type="button" 
+                data-bs-toggle="pill">${category}</button>
       `;
-    }
+    });
+    filterData(checkFilter.get("filter"));
   }
 }
 
 function filterData(filter) {
-  if (filter == "all") {
-    if (document.querySelector(".portfolioSection #portfolioContainer")) {
-      document.querySelector(
-        ".portfolioSection #portfolioContainer"
-      ).innerHTML = "";
-      let countItem = 0;
-      for (let i = 0; i < projects.length; i++) {
+  const filteredProjects =
+    filter === "all"
+      ? projects
+      : projects.filter((project) => project.pCategory === filter);
+
+  document.getElementById("paginationContainer")
+    ? document.getElementById("paginationContainer").classList.remove("d-none")
+    : "";
+
+  const totalItems = filteredProjects.length;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  if (currentPage > totalPages) currentPage = totalPages || 1;
+  updatePagination(totalPages);
+
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const paginatedProjects = filteredProjects.slice(start, end);
+
+  const container = document.querySelector(
+    ".portfolioSection #portfolioContainer"
+  );
+  container.innerHTML = paginatedProjects.length
+    ? paginatedProjects
+        .map(
+          (project, index) => `
+          <div class="col-lg-6 col-md-6">
+            <div class="card shadow-sm">
+              <div class="imageContainer">
+                <img src="assets/images/projects/${
+                  project.pImage[0]
+                }" loading="lazy" alt>
+              </div>
+              <a href="portfolio.html?filter=${
+                project.pCategory
+              }" class="category">${project.pCategory}</a>
+              <div class="content">
+                <div class="group">
+                  <span>${project.pDate}</span>
+                  <a href="#">comment (3)</a>
+                </div>
+                <a href="project-detail.html?id=${index + 1}" class="title">${
+            project.pName
+          }</a>
+                <div class="links">
+                  <a href="project-detail.html?id=${
+                    index + 1
+                  }" class="readmore">
+                    read more
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                  <div class="social">
+                    <span><i class="fa-solid fa-location-arrow"></i></span>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `
+        )
+        .join("")
+    : `
+      <div class="col-lg-12 col-md-12">
+        <div class="card notFound">
+          <img src="assets/images/notfound.svg" loading="lazy" alt="" />
+          <div class="content w-100">
+            <h1 class="title text-center">Projects are <span class="textContent">Not Found</span></h1>
+          </div>
+        </div>
+      </div>
+    `;
+}
+
+function updatePagination(totalPages) {
+  const paginationContainer = document.getElementById("paginationContainer");
+  paginationContainer.innerHTML = "";
+
+  paginationContainer.innerHTML += `
+    <a href="javascript:void(0)" class="${
+      currentPage === 1 ? "disabled" : ""
+    }" onclick="changePage(${currentPage - 1})">
+      <i class="fa-solid fa-chevron-left"></i>
+    </a>
+  `;
+
+  for (let i = 1; i <= totalPages; i++) {
+    paginationContainer.innerHTML += `
+      <a href="javascript:void(0)" class="${
+        currentPage === i ? "active" : ""
+      }" onclick="changePage(${i})">${i}</a>
+    `;
+  }
+
+  paginationContainer.innerHTML += `
+    <a href="javascript:void(0)" class="${
+      currentPage === totalPages ? "disabled" : ""
+    }" onclick="changePage(${currentPage + 1})">
+      <i class="fa-solid fa-chevron-right"></i>
+    </a>
+  `;
+}
+
+function changePage(page) {
+  const totalPages = Math.ceil(projects.length / itemsPerPage);
+  if (page < 1 || page > totalPages) return;
+  currentPage = page;
+  const activeFilter = document.querySelector(".active-filter");
+  const filter = activeFilter ? activeFilter.textContent.trim() : "all";
+  filterData(filter);
+}
+
+function applyFilter(filter) {
+  document
+    .querySelectorAll(".portfolioSection .filters .nav-link")
+    .forEach((button) => {
+      button.classList.remove("active", "active-filter");
+    });
+  const filterButton = Array.from(
+    document.querySelectorAll(".portfolioSection .filters .nav-link")
+  ).find((btn) => btn.textContent.trim() === filter);
+  if (filterButton) {
+    filterButton.classList.add("active", "active-filter");
+  }
+  currentPage = 1;
+  filterData(filter);
+}
+
+function searchProjects(event) {
+  event.preventDefault();
+  const searchQuery = document
+    .getElementById("searchInput")
+    .value.toLowerCase();
+  if (document.querySelector(".portfolioSection #portfolioContainer")) {
+    document.querySelector(".portfolioSection #portfolioContainer").innerHTML =
+      "";
+    let countItem = 0;
+    if (searchQuery === "") {
+      document.getElementById("paginationContainer")
+        ? document
+            .getElementById("paginationContainer")
+            .classList.remove("d-none")
+        : "";
+    } else {
+      document.getElementById("paginationContainer")
+        ? document.getElementById("paginationContainer").classList.add("d-none")
+        : "";
+    }
+    for (let i = 0; i < projects.length; i++) {
+      if (projects[i].pName.toLowerCase().includes(searchQuery)) {
         countItem++;
         document.querySelector(
           ".portfolioSection #portfolioContainer"
         ).innerHTML += `
                 <div class="col-lg-6 col-md-6">
-                  <div class="card shadow-sm">
-                      <div class="imageContainer">
-                          <img
-                              src="assets/images/projects/${
-                                projects[i].pImage
-                              }" loading="lazy"
-                              alt>
-                      </div>
-                      <a href="portfolio.html?filter=${
-                        projects[i].pCategory
-                      }" class="category">${projects[i].pCategory}</a>
-                      <div class="content">
-                          <div class="group">
-                              <span>Sep 20, 2023</span>
-                              <a href="#">comment (3)</a>
-                          </div>
-                          <a href="project-detail.html?id=${i + 1}"
-                              class="title">${projects[i].pName}</a>
-                          <div class="links">
-                              <a href="project-detail.html?id=${i + 1}"
-                                  class="readmore">
-                                  read more
-                                  <i
-                                      class="fa-solid fa-arrow-right"></i>
-                              </a>
-                              <div class="social">
-                                  <span><i
-                                          class="fa-solid fa-location-arrow"></i></span>
-                                  <a href="#"><i
-                                          class="fa-brands fa-facebook-f"></i></a>
-                                  <a href="#"><i
-                                          class="fa-brands fa-twitter"></i></a>
-                                  <a href="#"><i
-                                          class="fa-brands fa-pinterest-p"></i></a>
-                                  <a href="#"><i
-                                          class="fa-brands fa-instagram"></i></a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-            `;
-      }
-      if(countItem == 0){
-        document.querySelector(
-          ".portfolioSection #portfolioContainer"
-        ).innerHTML = `
-              <div class="col-lg-12 col-md-12">
-                <div class="card notFound">
-                    <img src="assets/images/notfound.svg" loading="lazy" alt="" />
-                    <div class="content w-100">
-                      <h1 class="title text-center">Projects are <span
-                      class="textContent">Not Found</span></h1>
+                <div class="card shadow-sm">
+                    <div class="imageContainer">
+                        <img
+                            src="assets/images/projects/${
+                              projects[i].pImage[0]
+                            }" loading="lazy"
+                            alt>
+                    </div>
+                    <a href="portfolio.html?filter=${
+                      projects[i].pCategory
+                    }" class="category">${projects[i].pCategory}</a>
+                    <div class="content">
+                        <div class="group">
+                            <span>${projects[i].pDate}</span>
+                            <a href="#">comment (3)</a>
+                        </div>
+                        <a href="project-detail.html?id=${i + 1}"
+                            class="title">${projects[i].pName}</a>
+                        <div class="links">
+                            <a href="project-detail.html?id=${i + 1}"
+                                class="readmore">
+                                read more
+                                <i
+                                    class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <div class="social">
+                                <span><i
+                                        class="fa-solid fa-location-arrow"></i></span>
+                                <a href="#"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i
+                                        class="fa-brands fa-pinterest-p"></i></a>
+                                <a href="#"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-              </div>
+            </div>
             `;
       }
     }
-  } else {
-    if (document.querySelector(".portfolioSection #portfolioContainer")) {
+
+    if (countItem == 0) {
       document.querySelector(
         ".portfolioSection #portfolioContainer"
-      ).innerHTML = "";
-      let countItem = 0;
-      for (let i = 0; i < projects.length; i++) {
-        if (projects[i].pCategory === filter) {
-          countItem++;
-          document.querySelector(
-            ".portfolioSection #portfolioContainer"
-          ).innerHTML += `
-                  <div class="col-lg-6 col-md-6">
-                  <div class="card shadow-sm">
-                      <div class="imageContainer">
-                          <img
-                              src="assets/images/projects/${
-                                projects[i].pImage
-                              }" loading="lazy"
-                              alt>
-                      </div>
-                      <a href="portfolio.html?filter=${
-                        projects[i].pCategory
-                      }" class="category">${projects[i].pCategory}</a>
-                      <div class="content">
-                          <div class="group">
-                              <span>Sep 20, 2023</span>
-                              <a href="#">comment (3)</a>
-                          </div>
-                          <a href="project-detail.html?id=${i + 1}"
-                              class="title">${projects[i].pName}</a>
-                          <div class="links">
-                              <a href="project-detail.html?id=${i + 1}"
-                                  class="readmore">
-                                  read more
-                                  <i
-                                      class="fa-solid fa-arrow-right"></i>
-                              </a>
-                              <div class="social">
-                                  <span><i
-                                          class="fa-solid fa-location-arrow"></i></span>
-                                  <a href="#"><i
-                                          class="fa-brands fa-facebook-f"></i></a>
-                                  <a href="#"><i
-                                          class="fa-brands fa-twitter"></i></a>
-                                  <a href="#"><i
-                                          class="fa-brands fa-pinterest-p"></i></a>
-                                  <a href="#"><i
-                                          class="fa-brands fa-instagram"></i></a>
-                              </div>
-                          </div>
-                      </div>
+      ).innerHTML = `
+            <div class="col-lg-12 col-md-12">
+              <div class="card notFound">
+                  <img src="assets/images/notfound.svg" loading="lazy" alt="" />
+                  <div class="content w-100">
+                    <h1 class="title text-center">Projects are <span
+                    class="textContent">Not Found</span></h1>
                   </div>
               </div>
-              `;
-        }
-      }
-
-      if(countItem == 0){
-        document.querySelector(
-          ".portfolioSection #portfolioContainer"
-        ).innerHTML = `
-              <div class="col-lg-12 col-md-12">
-                <div class="card notFound">
-                    <img src="assets/images/notfound.svg" loading="lazy" alt="" />
-                    <div class="content w-100">
-                      <h1 class="title text-center">Projects are <span
-                      class="textContent">Not Found</span></h1>
-                    </div>
-                </div>
-              </div>
-            `;
-      }
+            </div>
+          `;
     }
   }
 }

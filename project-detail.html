@@ -56,55 +56,10 @@
         <section class="blogSection py-5">
             <div class="container">
                 <div class="swiper myProjects mt-3 shadow-lg rounded-4">
+                    <div class="overlayBtn" onclick="clickModal(); clickModalFull();">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide rounded-4 overflow-hidden">
-                            <img src="assets/images/projects/law-1.png"
-                                class="w-100 rounded-4" loading="lazy" alt>
-                        </div>
-                        <div class="swiper-slide rounded-4 overflow-hidden">
-                            <script>
-                            if (url == "lawyer") {
-                                document.write('<img src="assets/images/projects-images/law-2.jpg" class="w-100 rounded-4" alt>');
-                            } else if (url == "lab") {
-                                document.write('<img src="assets/images/projects-images/Lab-2.png" class="w-100 rounded-4" alt>')
-                            } else if (url == "e-com") {
-                                document.write('<img src="assets/images/projects-images/e-com-2.jpg" class="w-100 rounded-4" alt>')
-                            }
-                        </script>
-                        </div>
-                        <div class="swiper-slide rounded-4 overflow-hidden">
-                            <script>
-                            if (url == "lawyer") {
-                                document.write('<img src="assets/images/projects-images/law-3.jpg" class="w-100 rounded-4" alt>');
-                            } else if (url == "lab") {
-                                document.write('<img src="assets/images/projects-images/Lab-3.png" class="w-100 rounded-4" alt>')
-                            } else if (url == "e-com") {
-                                document.write('<img src="assets/images/projects-images/e-com-3.jpg" class="w-100 rounded-4" alt>')
-                            }
-                        </script>
-                        </div>
-                        <div class="swiper-slide rounded-4 overflow-hidden">
-                            <script>
-                            if (url == "lawyer") {
-                                document.write('<img src="assets/images/projects-images/law-4.jpg" class="w-100 rounded-4" alt>');
-                            } else if (url == "lab") {
-                                document.write('<img src="assets/images/projects-images/Lab-4.jpg" class="w-100 rounded-4" alt>')
-                            } else if (url == "e-com") {
-                                document.write('<img src="assets/images/projects-images/e-com-4.jpg" class="w-100 rounded-4" alt>')
-                            }
-                        </script>
-                        </div>
-                        <div class="swiper-slide rounded-5 overflow-hidden">
-                            <script>
-                            if (url == "lawyer") {
-                                document.write('<img src="assets/images/projects-images/law-5.jpg" class="w-100 rounded-4" alt>');
-                            } else if (url == "lab") {
-                                document.write('<img src="assets/images/projects-images/Lab-5.png" class="w-100 rounded-4" alt>')
-                            } else if (url == "e-com") {
-                                document.write('<img src="assets/images/projects-images/e-com-5.jpg" class="w-100 rounded-4" alt>')
-                            }
-                        </script>
-                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -362,6 +317,49 @@
 
         <footer></footer>
 
+        <div class="modalSection">
+            <div class="modalContainer" onclick="clickModalFull()">
+                <a onclick="clickModal()" class="closeBtn"><i
+                        class="fa-solid fa-xmark"></i></a>
+                <div class="modalContent">
+                    <div class="col iframeContainer">
+                        <div class="imageContainer">
+                            <div class="wrapper"
+                                onclick="clickModalExpand()">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="controls">
+                                <a onclick="clickModalExpand()"><i
+                                        class="fa-solid fa-pause"></i></a>
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    onclick="clickModal()"
+                                    id="pLink"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a onclick="clickModalExtra()"
+                                    id="modalExtraBtn"><i
+                                        class="fa-solid fa-up-right-and-down-left-from-center"
+                                        onclick="clickModalExtra()"></i></a>
+                                <a onclick="clickModal()"><i
+                                        class="fa-solid fa-xmark"
+                                        onclick="clickModal()"></i></a>
+                            </div>
+                            <iframe
+                                src="#"
+                                frameborder="0" allowfullscreen="true"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                id="pLink3"></iframe>
+                            <img src=""
+                                id="pImage" loading="lazy"
+                                alt>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </body>
     <script src="assets/js/vanilla-tilt.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -434,23 +432,76 @@
         });
     }
 
-    // Calculate prev and next indices
     const prevIndex = (id - 1 + projects.length) % projects.length;
     const nextIndex = (id + 1) % projects.length;
 
-    // Get prev and next projects
     const prevProject = projects[prevIndex];
     const nextProject = projects[nextIndex];
 
     // Update prev navigation
     document.querySelector('.prev a').setAttribute('href', `project-detail.html?id=${prevIndex + 1}`);
     document.querySelector('.prev h4').textContent = prevProject.pName;
-    document.querySelector('.prev img').setAttribute('src', `assets/images/projects/${prevProject.pImage}`);
+    document.querySelector('.prev img').setAttribute('src', `assets/images/projects/${prevProject.pImage[0]}`);
 
     // Update next navigation
     document.querySelector('.next a').setAttribute('href', `project-detail.html?id=${nextIndex + 1}`);
     document.querySelector('.next h4').textContent = nextProject.pName;
-    document.querySelector('.next img').setAttribute('src', `assets/images/projects/${nextProject.pImage}`);
+    document.querySelector('.next img').setAttribute('src', `assets/images/projects/${nextProject.pImage[0]}`);
+
+    if(document.querySelector(".myProjects .swiper-wrapper")){
+        for(let i=0; i<projects[id].pImage.length; i++){
+            document.querySelector(".myProjects .swiper-wrapper").innerHTML += `
+                <div class="swiper-slide rounded-4 overflow-hidden">
+                    <img src="assets/images/projects/${projects[id].pImage[i]}"
+                        class="w-100 rounded-4" loading="lazy" alt>
+                </div>
+            `;
+        }
+    }
+
+    document.onreadystatechange = function () {
+        if (document.readyState === "complete") {
+            modalContentSet(`${projects[id].pImage[0]}`,`${projects[id].pLink}`);
+        }
+    };
+
+    function clickModal(){
+        document.querySelector(".modalSection").classList.toggle("active");
+        document.querySelector(".modalSection").classList.remove("full");
+        document.querySelector(".modalSection").classList.remove("expand");
+        document.querySelector(".modalSection").classList.remove("extra");
+    }
+
+    function clickModalFull(){
+        document.querySelector(".modalSection").classList.add("full");
+    }
+
+    function clickModalExpand(){
+        document.querySelector(".modalSection").classList.toggle("expand");
+    }
+
+    function clickModalExtra(){
+        document.querySelector(".modalSection").classList.toggle("extra");
+        if(document.querySelector(".modalSection").classList.contains("extra")){
+            document.querySelector("#modalExtraBtn").innerHTML = `<i class="fa-solid fa-down-left-and-up-right-to-center"></i>`;
+            document.querySelector("#modalExtraBtn2").innerHTML = `<i class="fa-solid fa-down-left-and-up-right-to-center"></i>`;
+        } else {
+            document.querySelector("#modalExtraBtn").innerHTML = `<i class="fa-solid fa-up-right-and-down-left-from-center"></i>`;
+            document.querySelector("#modalExtraBtn2").innerHTML = `<i class="fa-solid fa-up-right-and-down-left-from-center"></i>`;
+        }
+    }
+
+    function modalContentSet(pImage, pLink) {
+        if(pLink != ""){
+            document.querySelector(".blogSection .myProjects .overlayBtn")?document.querySelector(".blogSection .myProjects .overlayBtn").classList.add("active"):"";
+        }
+        document.querySelector(".modalSection #pLink").href = pLink;
+        document.querySelector(".modalSection #pLink3").src = pLink;
+        document.querySelector(
+            ".modalSection #pImage"
+        ).src = `assets/images/projects/${pImage}`;
+    }
+
 </script>
     <script>
     var swiper2 = new Swiper(".myProjects", {
@@ -459,7 +510,7 @@
         centeredSlides: true,
         slidesPerView: 1,
         spaceBetween: 10,
-        loop: true,
+        loop: false,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,

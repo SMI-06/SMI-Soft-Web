@@ -241,7 +241,8 @@ body {
     overflow-x: hidden;
 }
 
-body:has(.preloader.active) {
+body:has(.preloader.active),
+body:has(.modalSection.active.full) {
     overflow: hidden;
     pointer-events: none;
 }
@@ -2467,6 +2468,52 @@ header nav a {
     height: 90vh;
     object-fit: cover;
     object-position: top;
+
+    @media only screen and (max-width: 768px) {
+        height: 40vh;
+    }
+}
+
+.blogSection .myProjects .overlayBtn {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    z-index: 5;
+    font-size: 2.3rem;
+    color: var(--primary-color-dark);
+    cursor: pointer;
+    background-color: #fff;
+    padding: 0.5rem 0;
+    padding-left: 1.3rem;
+    padding-right: 1.0rem;
+    border-radius: 0 0 0 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.5rem;
+        padding-left: 1.0rem;
+        padding-right: 0.8rem;
+    }
+}
+
+.blogSection .myProjects .overlayBtn.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.blogSection .myProjects .overlayBtn:hover {
+    color: #fff;
+    background-image: var(--linear-gradient-left-primary);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.blogSection .myProjects {
+    @media only screen and (max-width: 768px) {
+        margin-top: 0.0rem !important;
+    }
 }
 
 .blogSection .sidePane .card .inputGroup {
@@ -3420,6 +3467,10 @@ header nav a {
     }
 }
 
+.portfolioSection:has(#portfolioContainer .card.notFound) .paginations {
+    display: none;
+}
+
 
 .contactUsContainer {
     position: relative;
@@ -3939,6 +3990,278 @@ footer .bottomContainer .social a {
 
 footer .bottomContainer .social a:hover {
     background-color: var(--secondary-color-dark);
+}
+
+body:has(.modalSection.active) {
+    overflow-y: hidden;
+}
+
+.modalSection {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.0);
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.modalSection.active {
+    pointer-events: all;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    opacity: 1;
+}
+
+.modalSection .modalContainer .closeBtn {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    z-index: 10;
+    background-color: var(--primary-color-dark);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    outline: 3px solid var(--primary-color-dark);
+    outline-offset: -5px;
+    transition: all 0.6s ease;
+}
+
+.modalSection .modalContainer .closeBtn:hover {
+    outline: 3px solid transparent;
+    outline-offset: 5px;
+    transform: rotate(180deg);
+}
+
+.modalSection .modalContainer {
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    transform: translateY(120%) scale(0.8);
+    border-radius: 20px;
+    opacity: 0;
+    outline: 2px solid transparent;
+    position: relative;
+    /* overflow: hidden; */
+    border: 5px solid #fff;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    transition: all 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.modalSection.active .modalContainer {
+    transform: translateY(80%) scale(0.8);
+    animation: modalFloatingAnim 3s 1s infinite ease;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.modalSection.active.full .modalContainer {
+    transform: translateY(0px) scale(1.0);
+    animation: modalFullAnim 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6) forwards;
+    cursor: auto;
+}
+
+.modalSection.active.full.extra .modalContainer {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+}
+
+.modalSection.active.full.extra .modalContent .imageContainer {
+    border-radius: 5px;
+}
+
+.modalSection.active.full.expand.extra .modalContainer .closeBtn {
+    scale: 0;
+}
+
+.modalSection.active.full.extra .modalContainer .closeBtn {
+    scale: 1;
+    top: 0px;
+    right: 0px;
+}
+
+.modalSection.active.full.extra .modalContent .imageContainer .controls a:nth-child(4) {
+    display: block;
+    opacity: 1;
+}
+
+.modalSection.active .modalContainer iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+}
+
+.modalSection.active.full .modalContainer iframe {
+    pointer-events: all;
+}
+
+.modalSection .modalContent {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    pointer-events: none;
+
+    @media screen and (max-width:786px) {
+        overflow-y: scroll;
+    }
+}
+
+.modalSection.active.full .modalContent {
+    pointer-events: all;
+}
+
+.modalSection .modalContent .imageContainer {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.modalSection .modalContent .imageContainer .wrapper {
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 6rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    text-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    cursor: pointer;
+
+    @media screen and (max-width:786px) {
+        font-size: 3rem;
+    }
+}
+
+.modalSection .modalContent .imageContainer img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+
+.modalSection .modalContent .imageContainer .controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: #fff;
+    border-radius: 0 0 0 8px;
+    padding: 15px 20px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    transform: translateY(-100px);
+    transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.modalSection .modalContent .imageContainer .controls a {
+    font-size: 16px;
+    color: var(--primary-color-dark);
+    cursor: pointer;
+}
+
+.modalSection .modalContent .imageContainer .controls a:nth-child(4) {
+    display: none;
+    opacity: 0;
+    transition: all 2s ease !important;
+}
+
+.modalSection .modalContent .iframeContainer {
+    width: 100%;
+    height: 100%;
+
+    @media screen and (max-width:786px) {
+        height: auto;
+    }
+}
+
+.modalSection.expand .modalContent .imageContainer .wrapper {
+    font-size: 0rem;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modalSection.active.expand .modalContainer .modalContent .imageContainer iframe {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.modalSection.active.expand .modalContainer .modalContent .imageContainer img {
+    opacity: 0;
+}
+
+.modalSection.active.expand .modalContent .imageContainer .controls {
+    transform: translateY(0px);
+}
+
+@keyframes modalFloatingAnim {
+
+    0%,
+    100%, 30%, 70% {
+        transform: translateY(80%) scale(0.8);
+    }
+
+    45% {
+        transform: translateY(85%) scale(0.8);
+    }
+
+    60% {
+        transform: translateY(75%) scale(0.8);
+    }
+
+}
+
+@keyframes modalFullAnim {
+    0% {
+        transform: translateY(80%) scale(0.8);
+    }
+
+    100% {
+        transform: translateY(0%) scale(1.0);
+    }
+}
+
+@keyframes errorAnim {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scaleX(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scaleX(1);
+    }
 }
 
 body:has(.blogSection .tableContent) footer .bottomContainer {
