@@ -134,7 +134,7 @@ if (document.querySelector("footer")) {
                         <div class="links">
                             <a href="index.html#about">about us</a>
                             <a href="index.html#how-we-work">how we work</a>
-                            <a href="index.html#testimonials">testimonials</a>
+                            <a href="testimonials.html">testimonials</a>
                             <a href="index.html#team">our team</a>
                             <a href="index.html#pricing">pricing plan</a>
                         </div>
