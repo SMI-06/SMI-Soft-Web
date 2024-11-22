@@ -29,6 +29,19 @@
 	translate: 0 -3.0em;
 }
 
+body:has(.blogSection .tableContent) .whatsapp-btn{
+	@media only screen and (max-width: 768px) {
+		translate: 0 -3.0em;
+    }
+}
+body:has(.blogSection .tableContent .collapse.show) .whatsapp-btn{
+	@media only screen and (max-width: 768px) {
+		scale: 0;
+		opacity: 0;
+		pointer-events: none;
+    }
+}
+
 .whatsapp-btn::before {
 	content: "";
 	width: 60px;
@@ -84,6 +97,21 @@
 
 .whatsappChat:has(.whatsapp-btn.up) .whatsapp-container.open {
 	bottom: calc(90px + 3em);
+}
+
+body:has(.blogSection .tableContent) .whatsappChat:has(.whatsapp-btn) .whatsapp-container.open{
+    @media only screen and (max-width: 768px) {
+        bottom: calc(90px + 3em);
+    }
+}
+
+body:has(.blogSection .tableContent .collapse.show) .whatsappChat:has(.whatsapp-btn) .whatsapp-container.open{
+	@media only screen and (max-width: 768px) {
+		opacity: 0;
+		pointer-events: none;
+		transform: translateY(-100%);
+		z-index: -1;
+    }
 }
 
 .whatsapp-container.open {
