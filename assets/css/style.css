@@ -239,6 +239,14 @@ html {
 body {
     position: relative;
     overflow-x: hidden;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url(../images/favicon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 30%;
+    @media only screen and (max-width: 768px) {
+        background-size: 50%;
+    }
 }
 
 body:has(.preloader.active),
@@ -2515,6 +2523,9 @@ header nav a {
         margin-top: 0.0rem !important;
     }
 }
+.blogSection .myProjects:hover {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px !important;
+}
 
 .blogSection .sidePane .card .inputGroup {
     display: flex;
@@ -2845,6 +2856,7 @@ header nav a {
     border: 1px solid var(--secondary-color-dark);
     padding: 5px 15px;
     border-radius: 5px;
+    color: var(--primary-color-dark);
 }
 
 .blogSection .blogContainer .paginations a.disabled {

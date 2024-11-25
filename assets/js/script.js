@@ -68,6 +68,86 @@ if (document.querySelector(".floatingAction")) {
   };
 }
 
+if(document.querySelector(".testimonialsSection")){
+  let itemCount = document
+    .querySelector(".testimonialsSection .testimonialsContainer")
+    .getAttribute("data-itemCount");
+  document.querySelector(".testimonialsSection .testimonialsContainer").innerHTML = "";
+  for (let i = 0; i < testimonials.length; i++) {
+    if(itemCount == "all"){
+      document.querySelector(".testimonialsSection .testimonialsContainer").innerHTML += `
+        <div class="${testimonials[i].tPos == 1?"col-lg-7 col-md-10":"col-lg-5 col-md-10"}">
+            <div class="card">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <img
+                        src="https://demo-egenslab.b-cdn.net/html/softconic/preview/assets/img/home-4/h4-testi-0${testimonials[i].tImage}"
+                        class="profile" loading="lazy" alt>
+                    <div class="flex-grow-1 userDetail">
+                        <h5>${testimonials[i].tName}</h5>
+                        <span>${testimonials[i].tPost}</span>
+                    </div>
+                    <div
+                        class="d-flex flex-column align-self-start">
+                        <span class="date">${testimonials[i].tDate}</span>
+                        <span class="time">${testimonials[i].tTime}</span>
+                    </div>
+                </div>
+                <p class="para">${testimonials[i].tMessage}</p>
+                <div class="d-flex align-items-center gap-1">
+                    <img src="assets/images/testimonials.png"
+                        class="star" alt>
+                    <h6 style="color: #d9232d;">SMI SOFTS</h6>
+                    <div class="rating" data-rating="${testimonials[i].tRating}">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+      `;
+    } else {
+      if (i < itemCount) {
+        document.querySelector(".testimonialsSection .testimonialsContainer").innerHTML += `
+          <div class="${testimonials[i].tPos == 1?"col-lg-7 col-md-10":"col-lg-5 col-md-10"}">
+              <div class="card">
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                      <img
+                          src="https://demo-egenslab.b-cdn.net/html/softconic/preview/assets/img/home-4/h4-testi-0${testimonials[i].tImage}"
+                          class="profile" loading="lazy" alt>
+                      <div class="flex-grow-1 userDetail">
+                          <h5>${testimonials[i].tName}</h5>
+                          <span>${testimonials[i].tPost}</span>
+                      </div>
+                      <div
+                          class="d-flex flex-column align-self-start">
+                          <span class="date">${testimonials[i].tDate}</span>
+                          <span class="time">${testimonials[i].tTime}</span>
+                      </div>
+                  </div>
+                  <p class="para">${testimonials[i].tMessage}</p>
+                  <div class="d-flex align-items-center gap-1">
+                      <img src="assets/images/testimonials.png"
+                          class="star" alt>
+                      <h6 style="color: #d9232d;">SMI SOFTS</h6>
+                      <div class="rating" data-rating="${testimonials[i].tRating}">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        `;
+      }
+    }
+  }
+}
+
 if (document.querySelector("#portfolio #portfolioContainer")) {
   let itemCount = document
     .querySelector("#portfolio #portfolioContainer")
@@ -124,7 +204,7 @@ if (document.querySelector("#portfolio #portfolioContainer")) {
 }
 
 let currentPage = 1;
-const itemsPerPage = 9;
+const itemsPerPage = 6;
 
 if (document.querySelector(".portfolioSection")) {
   const checkFilter = new URLSearchParams(window.location.search);
