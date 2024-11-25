@@ -1,14 +1,8 @@
-// document.onreadystatechange = function () {
-//     if (document.readyState !== "complete") {
-//         document.querySelector(".preloader").classList.add("active");
-//     } else {
-//         document.querySelector(".preloader").style.opacity = "0";
-//         setTimeout(() => {
-//             document.querySelector(".preloader").classList.remove("active");
-//             document.querySelector(".preloader").style.display = "none";
-//         }, 1200)
-//     }
-// };
+document.onreadystatechange = function () {
+    if (document.readyState === "complete") {
+        document.querySelector(".preloader").classList.add("hide");
+    }
+};
 
 function menuToggle() {
   if (document.querySelector("header nav").classList.contains("active")) {
@@ -68,19 +62,29 @@ if (document.querySelector(".floatingAction")) {
   };
 }
 
-if(document.querySelector(".testimonialsSection")){
+if (document.querySelector(".testimonialsSection")) {
   let itemCount = document
     .querySelector(".testimonialsSection .testimonialsContainer")
     .getAttribute("data-itemCount");
-  document.querySelector(".testimonialsSection .testimonialsContainer").innerHTML = "";
+  document.querySelector(
+    ".testimonialsSection .testimonialsContainer"
+  ).innerHTML = "";
   for (let i = 0; i < testimonials.length; i++) {
-    if(itemCount == "all"){
-      document.querySelector(".testimonialsSection .testimonialsContainer").innerHTML += `
-        <div class="${testimonials[i].tPos == 1?"col-lg-7 col-md-10":"col-lg-5 col-md-10"}">
+    if (itemCount == "all") {
+      document.querySelector(
+        ".testimonialsSection .testimonialsContainer"
+      ).innerHTML += `
+        <div class="${
+          testimonials[i].tPos == 1
+            ? "col-lg-7 col-md-10"
+            : "col-lg-5 col-md-10"
+        }">
             <div class="card">
                 <div class="d-flex align-items-center gap-3 mb-3">
                     <img
-                        src="https://demo-egenslab.b-cdn.net/html/softconic/preview/assets/img/home-4/h4-testi-0${testimonials[i].tImage}"
+                        src="https://demo-egenslab.b-cdn.net/html/softconic/preview/assets/img/home-4/h4-testi-0${
+                          testimonials[i].tImage
+                        }"
                         class="profile" loading="lazy" alt>
                     <div class="flex-grow-1 userDetail">
                         <h5>${testimonials[i].tName}</h5>
@@ -97,7 +101,9 @@ if(document.querySelector(".testimonialsSection")){
                     <img src="assets/images/testimonials.png"
                         class="star" alt>
                     <h6 style="color: #d9232d;">SMI SOFTS</h6>
-                    <div class="rating" data-rating="${testimonials[i].tRating}">
+                    <div class="rating" data-rating="${
+                      testimonials[i].tRating
+                    }">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -110,12 +116,20 @@ if(document.querySelector(".testimonialsSection")){
       `;
     } else {
       if (i < itemCount) {
-        document.querySelector(".testimonialsSection .testimonialsContainer").innerHTML += `
-          <div class="${testimonials[i].tPos == 1?"col-lg-7 col-md-10":"col-lg-5 col-md-10"}">
+        document.querySelector(
+          ".testimonialsSection .testimonialsContainer"
+        ).innerHTML += `
+          <div class="${
+            testimonials[i].tPos == 1
+              ? "col-lg-7 col-md-10"
+              : "col-lg-5 col-md-10"
+          }">
               <div class="card">
                   <div class="d-flex align-items-center gap-3 mb-3">
                       <img
-                          src="https://demo-egenslab.b-cdn.net/html/softconic/preview/assets/img/home-4/h4-testi-0${testimonials[i].tImage}"
+                          src="https://demo-egenslab.b-cdn.net/html/softconic/preview/assets/img/home-4/h4-testi-0${
+                            testimonials[i].tImage
+                          }"
                           class="profile" loading="lazy" alt>
                       <div class="flex-grow-1 userDetail">
                           <h5>${testimonials[i].tName}</h5>
@@ -132,7 +146,9 @@ if(document.querySelector(".testimonialsSection")){
                       <img src="assets/images/testimonials.png"
                           class="star" alt>
                       <h6 style="color: #d9232d;">SMI SOFTS</h6>
-                      <div class="rating" data-rating="${testimonials[i].tRating}">
+                      <div class="rating" data-rating="${
+                        testimonials[i].tRating
+                      }">
                           <i class="fa-solid fa-star"></i>
                           <i class="fa-solid fa-star"></i>
                           <i class="fa-solid fa-star"></i>
@@ -155,15 +171,31 @@ if (document.querySelector("#portfolio #portfolioContainer")) {
   document.querySelector("#portfolio #portfolioContainer").innerHTML = "";
   for (let i = 0; i < projects.length; i++) {
     if (i < itemCount) {
+      let images = "";
+      for (let j = 0; j < projects[i].pImage.length; j++) {
+        if (projects[i].pImage.length < 2) {
+          images += `
+                <img src="assets/images/projects/${
+                  projects[i].pImage[j]
+                }" loading="lazy" style="--item:${
+            j + 1
+          }; animation:none; opacity:1;" alt>
+              `;
+        } else {
+          images += `
+                <img src="assets/images/projects/${
+                  projects[i].pImage[j]
+                }" loading="lazy" style="--item:${j + 1};" alt>
+              `;
+        }
+      }
       document.querySelector("#portfolio #portfolioContainer").innerHTML += `
               <div class="col-lg-4 col-md-4">
                   <div class="card shadow-sm">
-                      <div class="imageContainer">
-                          <img
-                              src="assets/images/projects/${
-                                projects[i].pImage[0]
-                              }" loading="lazy"
-                              alt>
+                      <div class="imageContainer" style="--item-count:${
+                        projects[i].pImage.length
+                      };">
+                        ${images}
                       </div>
                       <a href="portfolio.html?filter=${
                         projects[i].pCategory
@@ -207,6 +239,16 @@ let currentPage = 1;
 const itemsPerPage = 6;
 
 if (document.querySelector(".portfolioSection")) {
+  for (let i = 0; i < projects.length; i++) {
+    if (i < itemsPerPage) {
+      document.querySelector(".portfolioSection #hint").innerHTML += `
+        <option value="${projects[i].pName}"></option>
+      `;
+    }
+  }
+}
+
+if (document.querySelector(".portfolioSection")) {
   const checkFilter = new URLSearchParams(window.location.search);
   if (!checkFilter.has("filter") || !checkFilter.get("filter")) {
     filterData("all");
@@ -222,7 +264,9 @@ if (document.querySelector(".portfolioSection")) {
   } else if (!categories.includes(checkFilter.get("filter"))) {
     window.location.href = "portfolio.html";
   } else {
-    document.querySelector(".portfolioSection .filters .allBtn").classList.remove("active");
+    document
+      .querySelector(".portfolioSection .filters .allBtn")
+      .classList.remove("active");
     categories.forEach((category) => {
       const isActive = category === checkFilter.get("filter");
       document.querySelector(".portfolioSection .filters").innerHTML += `
@@ -260,14 +304,32 @@ function filterData(filter) {
   );
   container.innerHTML = paginatedProjects.length
     ? paginatedProjects
-        .map(
-          (project, index) => `
+        .map((project, index) => {
+          let images = "";
+          for (let i = 0; i < project.pImage.length; i++) {
+            if (project.pImage.length < 2) {
+              images += `
+                <img src="assets/images/projects/${
+                  project.pImage[i]
+                }" loading="lazy" style="--item:${
+                i + 1
+              }; animation:none; opacity:1;" alt>
+              `;
+            } else {
+              images += `
+                <img src="assets/images/projects/${
+                  project.pImage[i]
+                }" loading="lazy" style="--item:${i + 1};" alt>
+              `;
+            }
+          }
+          return `
           <div class="col-lg-6 col-md-6">
             <div class="card shadow-sm">
-              <div class="imageContainer">
-                <img src="assets/images/projects/${
-                  project.pImage[0]
-                }" loading="lazy" alt>
+              <div class="imageContainer" style="--item-count:${
+                project.pImage.length
+              };">
+                ${images}
               </div>
               <a href="portfolio.html?filter=${
                 project.pCategory
@@ -298,8 +360,8 @@ function filterData(filter) {
               </div>
             </div>
           </div>
-        `
-        )
+        `;
+        })
         .join("")
     : `
       <div class="col-lg-12 col-md-12">
@@ -390,17 +452,33 @@ function searchProjects(event) {
     for (let i = 0; i < projects.length; i++) {
       if (projects[i].pName.toLowerCase().includes(searchQuery)) {
         countItem++;
+        let images = "";
+        for (let j = 0; j < projects[i].pImage.length; j++) {
+          if (projects[i].pImage.length < 2) {
+            images += `
+                <img src="assets/images/projects/${
+                  projects[i].pImage[j]
+                }" loading="lazy" style="--item:${
+              j + 1
+            }; animation:none; opacity:1;" alt>
+              `;
+          } else {
+            images += `
+                <img src="assets/images/projects/${
+                  projects[i].pImage[j]
+                }" loading="lazy" style="--item:${j + 1};" alt>
+              `;
+          }
+        }
         document.querySelector(
           ".portfolioSection #portfolioContainer"
         ).innerHTML += `
                 <div class="col-lg-6 col-md-6">
                 <div class="card shadow-sm">
-                    <div class="imageContainer">
-                        <img
-                            src="assets/images/projects/${
-                              projects[i].pImage[0]
-                            }" loading="lazy"
-                            alt>
+                    <div class="imageContainer" style="--item-count:${
+                      projects[i].pImage.length
+                    };">
+                        ${images}
                     </div>
                     <a href="portfolio.html?filter=${
                       projects[i].pCategory

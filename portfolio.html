@@ -22,9 +22,9 @@
         <link rel="stylesheet" href="assets/css/config.css">
     </head>
     <body>
-        <!-- <div class="preloader active">
-            <img src="assets/images/loader.gif" alt>
-        </div> -->
+        <div class="preloader">
+            <img src="assets/images/favicon.svg" loading="lazy" alt>
+        </div>
 
         <div class="whatsappChat"></div>
 
@@ -57,10 +57,12 @@
                     <div class="col-lg-4 col-md-12 mb-3 sidePane">
                         <div class="card mb-4">
                             <form method="post" action="" class="inputGroup" onsubmit="searchProjects(event)">
-                                <input type="text" maxlength="30"
-                                    placeholder="Search Here" id="searchInput" autocomplete="off" onkeyup="searchProjects(event)"  required>
+                                <input type="search" maxlength="30"
+                                    placeholder="Search Here" id="searchInput" list="hint" autocomplete="off" onkeyup="searchProjects(event)" onreset="searchProjects(event)" required>
                                 <button>search</button>
                             </form>
+                            <datalist id="hint">
+                            </datalist>
                         </div>
                         <div class="card mb-4">
                             <h1>category</h1>

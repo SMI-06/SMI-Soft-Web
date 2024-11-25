@@ -244,45 +244,68 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: 30%;
+
     @media only screen and (max-width: 768px) {
         background-size: 50%;
     }
 }
 
-body:has(.preloader.active),
+body:has(.preloader),
 body:has(.modalSection.active.full) {
     overflow: hidden;
     pointer-events: none;
+}
+
+body:has(.preloader.hide) {
+    overflow: auto;
+    pointer-events: all;
 }
 
 section {
     overflow-x: hidden !important;
 }
 
-.preloader.active {
+.preloader {
     position: fixed;
     height: 100vh;
     width: 100vw;
     top: 0;
     left: 0;
-    background-color: #fbfbfb;
+    /* background-color: #fbfbfb; */
     z-index: 12000;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--primary-color-dark);
+    mask-size: cover;
+    mask-position: center;
     transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
-.preloader.active img {
-    width: 25%;
+.preloader img {
+    width: 15%;
+    animation: logoAnim 2s ease infinite;
 
     @media only screen and (max-width: 768px) {
-        width: 45%;
+        width: 40%;
     }
 }
 
-.preloader {
-    display: none;
+.preloader.hide {
+    mask-image: url(../images/splash.gif);
+    pointer-events: none;
+}
+
+@keyframes logoAnim {
+    0%{
+        transform: scale(1.0) rotateY(0deg);
+    }
+    50%{
+        transform: scale(1.1) rotateY(360deg);
+    }
+    100%{
+        transform: scale(1.0) rotateY(0deg);
+    }
 }
 
 .top {
@@ -2523,6 +2546,7 @@ header nav a {
         margin-top: 0.0rem !important;
     }
 }
+
 .blogSection .myProjects:hover {
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px !important;
 }
@@ -3461,7 +3485,55 @@ header nav a {
     }
 }
 
-.portfolioSection #portfolioContainer .card.notFound {
+.portfolioSection #portfolioContainer .card .imageContainer,
+#portfolio #portfolioContainer .card .imageContainer {
+    position: relative;
+}
+
+.portfolioSection #portfolioContainer .card .imageContainer img,
+#portfolio #portfolioContainer .card .imageContainer img {
+    --item-duration: 10s;
+    /* Total animation duration */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    /* Default hidden */
+    animation: imageChangeAnim var(--item-duration) ease infinite;
+    animation-delay: calc(var(--item-duration) / var(--item-count) * (var(--item) - 1));
+}
+
+@keyframes imageChangeAnim {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+        /* Start fading in */
+    }
+
+    30% {
+        opacity: 1;
+        /* Fully visible */
+    }
+
+    50% {
+        opacity: 0;
+        /* Start fading out */
+    }
+
+    100% {
+        opacity: 0;
+        /* Fully hidden */
+    }
+}
+
+.portfolioSection #portfolioContainer .card.notFound,
+#portfolio #portfolioContainer .card.notFound {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3471,7 +3543,8 @@ header nav a {
     box-shadow: none !important;
 }
 
-.portfolioSection #portfolioContainer .notFound img {
+.portfolioSection #portfolioContainer .notFound img,
+#portfolio #portfolioContainer .notFound img {
     width: 35%;
 
     @media only screen and (max-width: 768px) {

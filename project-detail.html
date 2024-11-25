@@ -24,9 +24,9 @@
     </head>
 
     <body>
-        <!-- <div class="preloader active">
-        <img src="assets/images/loader.gif" alt>
-    </div> -->
+        <div class="preloader">
+            <img src="assets/images/favicon.svg" loading="lazy" alt>
+        </div>
 
         <div class="whatsappChat"></div>
 
@@ -459,11 +459,11 @@
         }
     }
 
-    document.onreadystatechange = function () {
-        if (document.readyState === "complete") {
+    // document.onreadystatechange = function () {
+    //     if (document.readyState === "complete") {
             modalContentSet(`${projects[id].pImage[0]}`,`${projects[id].pLink}`);
-        }
-    };
+    //     }
+    // };
 
     function clickModal(){
         document.querySelector(".modalSection").classList.toggle("active");
