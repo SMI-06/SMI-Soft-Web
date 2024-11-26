@@ -324,7 +324,7 @@ function filterData(filter) {
             }
           }
           return `
-          <div class="col-lg-6 col-md-6">
+          <div class="col-lg-4 col-md-4">
             <div class="card shadow-sm">
               <div class="imageContainer" style="--item-count:${
                 project.pImage.length
@@ -473,7 +473,7 @@ function searchProjects(event) {
         document.querySelector(
           ".portfolioSection #portfolioContainer"
         ).innerHTML += `
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-4 col-md-4">
                 <div class="card shadow-sm">
                     <div class="imageContainer" style="--item-count:${
                       projects[i].pImage.length
