@@ -230,6 +230,11 @@ body:has(.modalSection.active) .whatsappChat {
     }
 }
 
+::selection {
+    background-color: var(--primary-color-dark);
+    color: rgb(255, 198, 198);
+    text-shadow: 0 5px 6px rgba(0, 0, 0, 0.3);
+}
 
 html {
     scroll-behavior: smooth;
@@ -244,6 +249,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: 30%;
+    scroll-behavior: smooth;
 
     @media only screen and (max-width: 768px) {
         background-size: 50%;
@@ -556,6 +562,7 @@ header nav .dropdown {
 header nav .dropdown-menu {
     border-radius: 10px;
     padding: 0px;
+    overflow: hidden;
     /* width: 250px; */
 
     @media only screen and (max-width: 768px) {
@@ -1948,7 +1955,7 @@ header nav a {
 }
 
 .serviceDetailSection .lists .item {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.0em;
     font-family: 'outfit';
     font-size: 1.1em;
     position: relative;
@@ -1963,10 +1970,10 @@ header nav a {
     content: '';
     position: absolute;
     left: 1.0em;
-    top: 50%;
+    top: 0;
     width: 1.0em;
     height: 100%;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     background-image: url(../images/bullets.svg);
     background-repeat: no-repeat;
     background-size: contain;

@@ -33,7 +33,18 @@ if (document.querySelector("header")) {
             <a href="index.html" class="nav-item hvr-buzz-out home"> <span>home</span></a>
             <a href="index.html#about" class="nav-item hvr-buzz-out home"> <span>about</span></a>
             <a href="portfolio.html" class="nav-item hvr-buzz-out portfolio"> <span>portfolio</span></a>
-            <a href="index.html#services" class="nav-item hvr-buzz-out home"> <span>services</span></a>
+            <label class="dropdown">
+                <a href="javascript:void(0);" class="nav-item hvr-buzz-out dropdown-toggle services" role="button" data-bs-toggle="dropdown" aria-expanded="true"> <span>Services</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item web-development" href="service.website-development.html">Website Design & Development </a></li>
+                    <li><a class="dropdown-item software-development" href="">Software Development </a></li>
+                    <li><a class="dropdown-item mobile-development" href="">Mobile App Development </a></li>
+                    <li><a class="dropdown-item digital-marketing" href="service.digital-marketing.html">Digital Marketing </a></li>
+                    <li><a class="dropdown-item graphic-designing" href="">Graphic Designing </a></li>
+                    <li><a class="dropdown-item seo" href="">SEO (Search Engine Optimization)</a></li>
+                    <li><a class="dropdown-item account-finance" href="">Account & Finance </a></li>
+                </ul>
+            </label>
             <a href="team.html" class="nav-item hvr-buzz-out home"> <span>team</span></a>
         </nav>
         <div class="btnGroup">
