@@ -24,7 +24,7 @@ let skills = [
     image: "php.svg",
   },
 ];
-let categories = ["Web Design", "Web Application", "Mobile Application"];
+let categories = ["Web Design", "Web Application", "Mobile Application", "Digital Marketing", "Graphic Designing", "Accounts And Finance"];
 let projects = [
   {
     pName: "Regularhost",
@@ -236,7 +236,30 @@ let projects = [
     pDate: "Sep 20, 2023",
     pViews: "05",
   },
+  {
+    pName: "Online Laboratory",
+    pImage: ["lab-1.png"],
+    pLink: "https://arassignments-gallery.netlify.app/",
+    pCategory: categories[1],
+    pDesc: `Created Image Gallery using with creative designs and CSS3 animations with using JS.`,
+    pTech: [0, 1, 2],
+    pDate: "Feb 01, 2024",
+    pViews: "03",
+  },
+  {
+    pName: "CoreLaw",
+    pImage: ["law-1.png"],
+    pLink: "https://arassignments-gallery.netlify.app/",
+    pCategory: categories[1],
+    pDesc: `Created Image Gallery using with creative designs and CSS3 animations with using JS.`,
+    pTech: [0, 1, 2],
+    pDate: "Mar 20, 2023",
+    pViews: "07",
+  },
 ];
+
+
+
 let testimonials = [
   {
     tName: "Zafar Ul Hasnain",
