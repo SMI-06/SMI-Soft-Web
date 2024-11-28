@@ -41,7 +41,7 @@ if (document.querySelector("header")) {
                     <li><a class="dropdown-item mobile-development" href="">Mobile App Development </a></li>
                     <li><a class="dropdown-item digital-marketing" href="service.digital-marketing.html">Digital Marketing </a></li>
                     <li><a class="dropdown-item graphic-designing" href="">Graphic Designing </a></li>
-                    <li><a class="dropdown-item seo" href="">SEO (Search Engine Optimization)</a></li>
+                    <li><a class="dropdown-item seo" href="service.seo.html">SEO (Search Engine Optimization)</a></li>
                     <li><a class="dropdown-item account-finance" href="">Account & Finance </a></li>
                 </ul>
             </label>
