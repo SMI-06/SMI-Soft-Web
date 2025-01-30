@@ -1,7 +1,7 @@
 document.onreadystatechange = function () {
-    if (document.readyState === "complete") {
-        document.querySelector(".preloader").classList.add("hide");
-    }
+  if (document.readyState === "complete") {
+    document.querySelector(".preloader")?document.querySelector(".preloader").classList.add("hide"):"";
+  }
 };
 
 function menuToggle() {
@@ -19,11 +19,13 @@ function menuToggle() {
 }
 
 window.addEventListener("scroll", function () {
-  if (document.querySelector("header nav").classList.contains("active")) {
-    document.querySelector("header nav").classList.remove("active");
-    document.querySelector(
-      "header .buttonToggle"
-    ).innerHTML = `<i class="fas fa-bars"></i>`;
+  if(document.querySelector("header")){
+    if (document.querySelector("header nav").classList.contains("active")) {
+      document.querySelector("header nav").classList.remove("active");
+      document.querySelector(
+        "header .buttonToggle"
+      ).innerHTML = `<i class="fas fa-bars"></i>`;
+    }
   }
   if (document.querySelector(".blogSection .tableContent .content")) {
     document
@@ -37,6 +39,14 @@ window.addEventListener("scroll", function () {
       .classList.remove("show");
   }
 });
+
+const targetElement = document.querySelector("body");
+if (targetElement) {
+  targetElement.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+}
 
 if (document.querySelector(".floatingAction")) {
   window.onscroll = () => {
