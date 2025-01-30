@@ -45,7 +45,17 @@ if (document.querySelector("header")) {
                     <li><a class="dropdown-item account-finance" href="">Account & Finance </a></li>
                 </ul>
             </label>
-            <a href="team.html" class="nav-item hvr-buzz-out home"> <span>team</span></a>
+              <a href="team.html" class="nav-item hvr-buzz-out home"> <span>team</span></a>
+             <label class="dropdown">
+                <a href="javascript:void(0);" class="nav-item hvr-buzz-out dropdown-toggle packages" role="button" data-bs-toggle="dropdown" aria-expanded="true"> <span>Packages</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item web-development" href="package.website-development.html">Website Design & Development </a></li>
+                    <li><a class="dropdown-item software-development" href="package.software-development.html">Software Development </a></li>
+                    <li><a class="dropdown-item mobile-development" href="package.mobile-app.html">Mobile App Development </a></li>
+                    <li><a class="dropdown-item digital-marketing" href="package.digital-marketing.html">Digital Marketing </a></li>
+                    <li><a class="dropdown-item account-finance" href="package.accounts-finance.html">Account & Finance </a></li>
+                </ul>
+            </label>
         </nav>
         <div class="btnGroup">
             <a href="contact.html" class="btnPrimary hvr-buzz-out">Contact Us</a>
@@ -126,7 +136,7 @@ if (document.querySelector("footer")) {
                                 <span>say hello</span>
                             </div>
                             <a href="tel:+92 301-024-7722">+92 301-024-7722</a>
-                            <a href="mailto:info.smisofts@gmail.com">info.smisofts@gmail.com</a>
+                            <a href="mailto:info@smisofts.com">info@smisofts.com</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3">
