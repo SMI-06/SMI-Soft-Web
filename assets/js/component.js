@@ -50,10 +50,9 @@ if (document.querySelector("header")) {
                 <a href="javascript:void(0);" class="nav-item hvr-buzz-out dropdown-toggle packages" role="button" data-bs-toggle="dropdown" aria-expanded="true"> <span>Packages</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item web-development" href="package.website-development.html">Website Design & Development </a></li>
-                    <li><a class="dropdown-item software-development" href="package.software-development.html">Software Development </a></li>
                     <li><a class="dropdown-item mobile-development" href="package.mobile-app.html">Mobile App Development </a></li>
-                    <li><a class="dropdown-item digital-marketing" href="package.digital-marketing.html">Digital Marketing </a></li>
-                    <li><a class="dropdown-item account-finance" href="package.accounts-finance.html">Account & Finance </a></li>
+                    <li><a class="dropdown-item digital-marketing" href="package.html?dm">Digital Marketing </a></li>
+                    <li><a class="dropdown-item account-finance" href="package.account-finance.html">Account & Finance </a></li>
                 </ul>
             </label>
         </nav>
