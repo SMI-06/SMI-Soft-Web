@@ -9,8 +9,8 @@ if (document.querySelector(".top")) {
                     <a href="https://www.threads.net/@smi.softs"><i class="fa-brands fa-threads"></i></a>
                 </div>
                 <div class="col-md-8 col-lg-8 contactDetails">
-                    <a href="#"><i class="bi bi-geo-alt"></i> <span class="ms-1">SMI SOFTS, Green Town, Karachi, Pakistan</span></a>
-                    <a href="#"><i class="bi bi-telephone"></i> <span class="ms-1">Cell +92 301-024-7722</span></a>
+                    <a href="#"><i class="fa-regular fa-envelope"></i> <span class="ms-1">info@smisofts.com</span></a>
+                    <a href="#"><i class="fa-solid fa-phone"></i> <span class="ms-1">+92 301-024-7722</span></a>
                 </div>
             </div>
         </div>
@@ -46,15 +46,6 @@ if (document.querySelector("header")) {
                 </ul>
             </label>
               <a href="team.html" class="nav-item hvr-buzz-out home"> <span>team</span></a>
-             <label class="dropdown">
-                <a href="javascript:void(0);" class="nav-item hvr-buzz-out dropdown-toggle packages" role="button" data-bs-toggle="dropdown" aria-expanded="true"> <span>Packages</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item pg-web-development" href="package.website-development.html">Website Design & Development </a></li>
-                    <li><a class="dropdown-item pg-mobile-development" href="package.mobile-app.html">Mobile App Development </a></li>
-                    <li><a class="dropdown-item pg-digital-marketing" href="package.digital-marketing.html">Digital Marketing </a></li>
-                    <li><a class="dropdown-item pg-account-finance" href="package.account-finance.html">Account & Finance </a></li>
-                </ul>
-            </label>
         </nav>
         <div class="btnGroup">
             <a href="contact.html" class="btnPrimary hvr-buzz-out">Contact Us</a>
