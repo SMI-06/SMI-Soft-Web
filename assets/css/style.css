@@ -690,7 +690,11 @@ header nav a {
     font-family: 'outfit';
     font-size: 4em;
     margin-bottom: 0.2em;
+<<<<<<< HEAD
+    color: blue;
+=======
     color: rgb(48, 48, 48);
+>>>>>>> parent of 12dd757 (Updated)
 
     @media only screen and (max-width: 768px) {
         margin-bottom: 0.5em;
@@ -703,7 +707,7 @@ header nav a {
 .heroSection p {
     font-family: 'poppins';
     margin-bottom: 2.5em;
-    color: var(--para-text-color);
+    color: white;
 
     @media only screen and (max-width: 768px) {
         text-align: center;
