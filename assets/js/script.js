@@ -213,7 +213,6 @@ if (document.querySelector("#portfolio #portfolioContainer")) {
                       <div class="content">
                           <div class="group">
                               <span>${projects[i].pDate}</span>
-                              <a href="#">comment (3)</a>
                           </div>
                           <a href="project-detail.html?id=${i + 1}"
                               class="title">${projects[i].pName}</a>
@@ -347,7 +346,6 @@ function filterData(filter) {
               <div class="content">
                 <div class="group">
                   <span>${project.pDate}</span>
-                  <a href="#">comment (3)</a>
                 </div>
                 <a href="project-detail.html?id=${index + 1}" class="title">${
             project.pName
@@ -496,7 +494,6 @@ function searchProjects(event) {
                     <div class="content">
                         <div class="group">
                             <span>${projects[i].pDate}</span>
-                            <a href="#">comment (3)</a>
                         </div>
                         <a href="project-detail.html?id=${i + 1}"
                             class="title">${projects[i].pName}</a>

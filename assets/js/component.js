@@ -132,21 +132,23 @@ if (document.querySelector("footer")) {
                     <div class="col-lg-3 col-md-3">
                         <h2>our services</h2>
                         <div class="links">
-                            <a href="index.html#services">web design & development</a>
-                            <a href="index.html#services">software development</a>
-                            <a href="index.html#services">Graphic Designing</a>
-                            <a href="index.html#services">Digital Marketing</a>
-                            <a href="index.html#services">mobile app development</a>
-                            <a href="index.html#services">Accounting and Finance</a>
+                            <a href="service.website-development.html">web design & development</a>
+                            <a href="service.software-development.html">software development</a>
+                            <a href="service.mobile-app-development.html">mobile app development</a>
+                            <a href="service.digital-marketing.html">Digital Marketing</a>
+                            <a href="service.graphic-designing.html">Graphic Designing</a>
+                            <a href="service.seo.html">Search Engine Optimization</a>
+                            <a href="service.account-finance.html">Accounting and Finance</a>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-2">
                         <h2>company</h2>
                         <div class="links">
                             <a href="index.html#about">about us</a>
+                            <a href="portfolio.html">portfolio</a>
                             <a href="index.html#how-we-work">how we work</a>
                             <a href="testimonials.html">testimonials</a>
-                            <a href="index.html#team">our team</a>
+                            <a href="team.html">our team</a>
                             <a href="index.html#pricing">pricing plan</a>
                         </div>
                     </div>
