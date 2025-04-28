@@ -195,6 +195,9 @@ body:has(.modalSection.active) .whatsappChat {
     pointer-events: none;
 }
 
+.whatsappChat {
+    display: none;
+}
 
 @keyframes floatingAction {
     from {
@@ -701,7 +704,7 @@ header nav a {
 .heroSection p {
     font-family: 'poppins';
     margin-bottom: 2.5em;
-    color: white;
+    color: black;
 
     @media only screen and (max-width: 768px) {
         text-align: center;

@@ -89,6 +89,22 @@ let projects = [
     pDate: "",
     pViews: "05",
   },
+  {
+    pName: "AeroShine Duct Cleaning",
+    pImage: ["23.jpg"],
+    pLink: "https://aeroshineduct.com/",
+    pCategory: categories[1],
+    pDesc: `AeroShine Duct Cleaning Services delivers a breath of fresh air through their
+    meticulous and customer-focused approach. Their expert technicians provide a thorough
+    cleaning of your air ducts and vents, ensuring improved indoor air quality and a healthier
+    living environment. Experience the difference of their dedicated service, where payment is
+    only required upon your complete satisfaction. Discover cleaner air and a more efficient
+    HVAC system with AeroShine Duct Cleaning Services at www.aeroshineduct.com.`,
+    pTech: [0, 1, 2, 3, 4, 5],
+    pDate: "",
+    pViews: "05",
+  },
+
   // {
   //   pName: "3D Profile Card",
   //   pImage: ["6.png"],
@@ -307,19 +323,23 @@ let projects = [
 
 let testimonials = [
   {
-    tName: "Zafar Ul Hasnain",
-    tPost: "",
-    tImage: "1.png",
-    tMessage: `“SMI SOFTS developed a custom software solution tailored to our business needs. Their work was timely and highly professional. Our daily operations have become much more efficient now. Highly recommended for anyone looking for reliable IT solutions”`,
-    tDate: "Feb 19, 2025",
+    tName: "Farhan Ali",
+    tPost: "CEO Of AeroShine Duct Cleaning",
+    tImage: "AeroShine.png",
+    tMessage: `“SMI Softs delivered outstanding digital marketing services, including highly 
+    effective Meta Ads campaigns, for AeroShine Duct Cleaning Service. Their expert team also 
+    crafted a professional and user-friendly website through their design and development services, 
+    contributing significantly to AeroShine's online presence. Professional, reliable, and highly 
+    recommended!”`,
+    tDate: "Apr 27, 2025",
     tTime: "",
-    tRating: 2,
+    tRating: 5,
     tPos: 1,
   },
   {
     tName: "Muhammad Amjad",
     tPost: "",
-    tImage: "2.png",
+    tImage: "2.jpg",
     tMessage: `“Working with SMI SOFTS was fantastic. They built a user-friendly e-commerce website, and everything runs smoothly. We've noticed an increase in sales, and customer feedback is great”`,
     tDate: "Jan 9, 2025",
     tTime: "",
@@ -329,7 +349,7 @@ let testimonials = [
   {
     tName: "Muhammad Moiz",
     tPost: "",
-    tImage: "3.png",
+    tImage: "3.jpg",
     tMessage: `“SMI SOFTS’ digital marketing strategies have transformed our brand. Their social media campaigns and SEO efforts have greatly improved our visibility and engagement. They truly know what they’re doing”`,
     tDate: "Dec 16, 2024",
     tTime: "",
@@ -339,7 +359,7 @@ let testimonials = [
   {
     tName: "Muhammad Huzaifa",
     tPost: "",
-    tImage: "4.png",
+    tImage: "4.jpg",
     tMessage: `“Developing a mobile app with SMI SOFTS was a great experience. The team focused on user experience and functionality, which outstanding. They met all deadlines, and communication throughout the process was seamless”`,
     tDate: "Dec 01, 2024",
     tTime: "",

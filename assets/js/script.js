@@ -92,7 +92,7 @@ if (document.querySelector(".testimonialsSection")) {
             <div class="card">
                 <div class="d-flex align-items-center gap-3 mb-3">
                     <img
-                        src="https://demo-egenslab.b-cdn.net/html/softconic/preview/assets/img/home-4/h4-testi-0${
+                        src="assets/images/testimonials_client_logo/${
                           testimonials[i].tImage
                         }"
                         class="profile" loading="lazy" alt>
