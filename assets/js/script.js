@@ -1,6 +1,6 @@
 document.onreadystatechange = function () {
   if (document.readyState === "complete") {
-    document.querySelector(".preloader")?document.querySelector(".preloader").classList.add("hide"):"";
+    document.querySelector(".preloader") ? document.querySelector(".preloader").classList.add("hide") : "";
   }
 };
 
@@ -19,7 +19,7 @@ function menuToggle() {
 }
 
 window.addEventListener("scroll", function () {
-  if(document.querySelector("header")){
+  if (document.querySelector("header")) {
     if (document.querySelector("header nav").classList.contains("active")) {
       document.querySelector("header nav").classList.remove("active");
       document.querySelector(
@@ -84,16 +84,14 @@ if (document.querySelector(".testimonialsSection")) {
       document.querySelector(
         ".testimonialsSection .testimonialsContainer"
       ).innerHTML += `
-        <div class="${
-          testimonials[i].tPos == 1
-            ? "col-lg-7 col-md-10"
-            : "col-lg-5 col-md-10"
+        <div class="${testimonials[i].tPos == 1
+          ? "col-lg-7 col-md-10"
+          : "col-lg-5 col-md-10"
         }">
             <div class="card">
                 <div class="d-flex align-items-center gap-3 mb-3">
                     <img
-                        src="assets/images/testimonials_client_logo/${
-                          testimonials[i].tImage
+                       src="assets/images/testimonials_client_logo/${testimonials[i].tImage}"
                         }"
                         class="profile" loading="lazy" alt>
                     <div class="flex-grow-1 userDetail">
@@ -111,9 +109,8 @@ if (document.querySelector(".testimonialsSection")) {
                     <img src="assets/images/testimonials.png"
                         class="star" alt>
                     <h6 style="color: #d9232d;">SMI SOFTS</h6>
-                    <div class="rating" data-rating="${
-                      testimonials[i].tRating
-                    }">
+                    <div class="rating" data-rating="${testimonials[i].tRating
+        }">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -129,17 +126,15 @@ if (document.querySelector(".testimonialsSection")) {
         document.querySelector(
           ".testimonialsSection .testimonialsContainer"
         ).innerHTML += `
-          <div class="${
-            testimonials[i].tPos == 1
-              ? "col-lg-7 col-md-10"
-              : "col-lg-5 col-md-10"
+          <div class="${testimonials[i].tPos == 1
+            ? "col-lg-7 col-md-10"
+            : "col-lg-5 col-md-10"
           }">
               <div class="card">
                   <div class="d-flex align-items-center gap-3 mb-3">
                       <img
-                          src="https://demo-egenslab.b-cdn.net/html/softconic/preview/assets/img/home-4/h4-testi-0${
-                            testimonials[i].tImage
-                          }"
+                          src="https://demo-egenslab.b-cdn.net/html/softconic/preview/assets/img/home-4/h4-testi-0${testimonials[i].tImage
+          }"
                           class="profile" loading="lazy" alt>
                       <div class="flex-grow-1 userDetail">
                           <h5>${testimonials[i].tName}</h5>
@@ -156,9 +151,8 @@ if (document.querySelector(".testimonialsSection")) {
                       <img src="assets/images/testimonials.png"
                           class="star" alt>
                       <h6 style="color: #d9232d;">SMI SOFTS</h6>
-                      <div class="rating" data-rating="${
-                        testimonials[i].tRating
-                      }">
+                      <div class="rating" data-rating="${testimonials[i].tRating
+          }">
                           <i class="fa-solid fa-star"></i>
                           <i class="fa-solid fa-star"></i>
                           <i class="fa-solid fa-star"></i>
@@ -185,31 +179,26 @@ if (document.querySelector("#portfolio #portfolioContainer")) {
       for (let j = 0; j < projects[i].pImage.length; j++) {
         if (projects[i].pImage.length < 2) {
           images += `
-                <img src="assets/images/projects/${
-                  projects[i].pImage[j]
-                }" loading="lazy" style="--item:${
-            j + 1
-          }; animation:none; opacity:1;" alt>
+                <img src="assets/images/projects/${projects[i].pImage[j]
+            }" loading="lazy" style="--item:${j + 1
+            }; animation:none; opacity:1;" alt>
               `;
         } else {
           images += `
-                <img src="assets/images/projects/${
-                  projects[i].pImage[j]
-                }" loading="lazy" style="--item:${j + 1};" alt>
+                <img src="assets/images/projects/${projects[i].pImage[j]
+            }" loading="lazy" style="--item:${j + 1};" alt>
               `;
         }
       }
       document.querySelector("#portfolio #portfolioContainer").innerHTML += `
               <div class="col-lg-4 col-md-4">
                   <div class="card shadow-sm">
-                      <div class="imageContainer" style="--item-count:${
-                        projects[i].pImage.length
-                      };">
+                      <div class="imageContainer" style="--item-count:${projects[i].pImage.length
+        };">
                         ${images}
                       </div>
-                      <a href="portfolio.html?filter=${
-                        projects[i].pCategory
-                      }" class="category">${projects[i].pCategory}</a>
+                      <a href="portfolio.html?filter=${projects[i].pCategory
+        }" class="category">${projects[i].pCategory}</a>
                       <div class="content">
                           <div class="group">
                               <span>${projects[i].pDate}</span>
@@ -313,47 +302,40 @@ function filterData(filter) {
   );
   container.innerHTML = paginatedProjects.length
     ? paginatedProjects
-        .map((project, index) => {
-          let images = "";
-          for (let i = 0; i < project.pImage.length; i++) {
-            if (project.pImage.length < 2) {
-              images += `
-                <img src="assets/images/projects/${
-                  project.pImage[i]
-                }" loading="lazy" style="--item:${
-                i + 1
+      .map((project, index) => {
+        let images = "";
+        for (let i = 0; i < project.pImage.length; i++) {
+          if (project.pImage.length < 2) {
+            images += `
+                <img src="assets/images/projects/${project.pImage[i]
+              }" loading="lazy" style="--item:${i + 1
               }; animation:none; opacity:1;" alt>
               `;
-            } else {
-              images += `
-                <img src="assets/images/projects/${
-                  project.pImage[i]
-                }" loading="lazy" style="--item:${i + 1};" alt>
+          } else {
+            images += `
+                <img src="assets/images/projects/${project.pImage[i]
+              }" loading="lazy" style="--item:${i + 1};" alt>
               `;
-            }
           }
-          return `
+        }
+        return `
           <div class="col-lg-4 col-md-4">
             <div class="card shadow-sm">
-              <div class="imageContainer" style="--item-count:${
-                project.pImage.length
-              };">
+              <div class="imageContainer" style="--item-count:${project.pImage.length
+          };">
                 ${images}
               </div>
-              <a href="portfolio.html?filter=${
-                project.pCategory
-              }" class="category">${project.pCategory}</a>
+              <a href="portfolio.html?filter=${project.pCategory
+          }" class="category">${project.pCategory}</a>
               <div class="content">
                 <div class="group">
                   <span>${project.pDate}</span>
                 </div>
-                <a href="project-detail.html?id=${index + 1}" class="title">${
-            project.pName
+                <a href="project-detail.html?id=${index + 1}" class="title">${project.pName
           }</a>
                 <div class="links">
-                  <a href="project-detail.html?id=${
-                    index + 1
-                  }" class="readmore">
+                  <a href="project-detail.html?id=${index + 1
+          }" class="readmore">
                     read more
                     <i class="fa-solid fa-arrow-right"></i>
                   </a>
@@ -369,8 +351,8 @@ function filterData(filter) {
             </div>
           </div>
         `;
-        })
-        .join("")
+      })
+      .join("")
     : `
       <div class="col-lg-12 col-md-12">
         <div class="card notFound">
@@ -388,8 +370,7 @@ function updatePagination(totalPages) {
   paginationContainer.innerHTML = "";
 
   paginationContainer.innerHTML += `
-    <a href="javascript:void(0)" class="${
-      currentPage === 1 ? "disabled" : ""
+    <a href="javascript:void(0)" class="${currentPage === 1 ? "disabled" : ""
     }" onclick="changePage(${currentPage - 1})">
       <i class="fa-solid fa-chevron-left"></i>
     </a>
@@ -397,15 +378,13 @@ function updatePagination(totalPages) {
 
   for (let i = 1; i <= totalPages; i++) {
     paginationContainer.innerHTML += `
-      <a href="javascript:void(0)" class="${
-        currentPage === i ? "active" : ""
+      <a href="javascript:void(0)" class="${currentPage === i ? "active" : ""
       }" onclick="changePage(${i})">${i}</a>
     `;
   }
 
   paginationContainer.innerHTML += `
-    <a href="javascript:void(0)" class="${
-      currentPage === totalPages ? "disabled" : ""
+    <a href="javascript:void(0)" class="${currentPage === totalPages ? "disabled" : ""
     }" onclick="changePage(${currentPage + 1})">
       <i class="fa-solid fa-chevron-right"></i>
     </a>
@@ -449,8 +428,8 @@ function searchProjects(event) {
     if (searchQuery === "") {
       document.getElementById("paginationContainer")
         ? document
-            .getElementById("paginationContainer")
-            .classList.remove("d-none")
+          .getElementById("paginationContainer")
+          .classList.remove("d-none")
         : "";
     } else {
       document.getElementById("paginationContainer")
@@ -464,17 +443,14 @@ function searchProjects(event) {
         for (let j = 0; j < projects[i].pImage.length; j++) {
           if (projects[i].pImage.length < 2) {
             images += `
-                <img src="assets/images/projects/${
-                  projects[i].pImage[j]
-                }" loading="lazy" style="--item:${
-              j + 1
-            }; animation:none; opacity:1;" alt>
+                <img src="assets/images/projects/${projects[i].pImage[j]
+              }" loading="lazy" style="--item:${j + 1
+              }; animation:none; opacity:1;" alt>
               `;
           } else {
             images += `
-                <img src="assets/images/projects/${
-                  projects[i].pImage[j]
-                }" loading="lazy" style="--item:${j + 1};" alt>
+                <img src="assets/images/projects/${projects[i].pImage[j]
+              }" loading="lazy" style="--item:${j + 1};" alt>
               `;
           }
         }
@@ -483,14 +459,12 @@ function searchProjects(event) {
         ).innerHTML += `
                 <div class="col-lg-4 col-md-4">
                 <div class="card shadow-sm">
-                    <div class="imageContainer" style="--item-count:${
-                      projects[i].pImage.length
-                    };">
+                    <div class="imageContainer" style="--item-count:${projects[i].pImage.length
+          };">
                         ${images}
                     </div>
-                    <a href="portfolio.html?filter=${
-                      projects[i].pCategory
-                    }" class="category">${projects[i].pCategory}</a>
+                    <a href="portfolio.html?filter=${projects[i].pCategory
+          }" class="category">${projects[i].pCategory}</a>
                     <div class="content">
                         <div class="group">
                             <span>${projects[i].pDate}</span>
