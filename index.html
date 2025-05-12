@@ -18,6 +18,26 @@
     <!-- Style Links -->
     <link rel="shortcut icon" href="assets/images/favicon.png">
     <link rel="stylesheet" href="assets/css/config.css">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1564942864429300');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1564942864429300&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 
 <body>
@@ -152,7 +172,8 @@
                             backend systems,
                             we create software that enhances efficiency and
                             aligns with your business needs.</p>
-                        <a href="service.software-development.html">Read More <i class="fa-solid fa-angle-right"></i></a>
+                        <a href="service.software-development.html">Read More <i
+                                class="fa-solid fa-angle-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-5 item">
@@ -166,7 +187,8 @@
                             From intuitive designs to smooth functionality,
                             our apps help you engage users and grow your
                             business on iOS and Android platforms.</p>
-                        <a href="service.mobile-app-development.html">Read More <i class="fa-solid fa-angle-right"></i></a>
+                        <a href="service.mobile-app-development.html">Read More <i
+                                class="fa-solid fa-angle-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-5 item">
@@ -580,22 +602,6 @@
             </div>
         </div>
     </section>
-
-    <section class="testimonialsSection py-5 bg-light" id="testimonials">
-        <div class="container">
-            <h3 class="semiTitle">testimonials</h3>
-            <h1 class="title">Appreciations From Our <span class="textContent">Satisfied</span> Customers</h1>
-            <!-- <div class="row g-4 mt-3 justify-content-center testimonialsContainer" data-itemCount="4">
-            </div> -->
-            <div class="row g-4 mt-3 justify-content-center testimonialsContainer" data-itemCount="4">
-            </div>
-            <div class="d-flex justify-content-center mt-5 hvr-buzz-out">
-                <a href="testimonials.html" class="btnPrimary">Load
-                    More...</a>
-            </div>
-        </div>
-    </section>
-
     <!-- choose Plans  -->
     <section class="pricingSection py-5" id="pricing">
         <div class="container">

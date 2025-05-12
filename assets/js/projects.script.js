@@ -157,7 +157,7 @@ let testimonials = [
   },
   {
     tName: "Michael",
-    tPost: "",
+    tPost: "Founder",
     tImage: "2.jpg",
     tMessage: `“Working with SMI SOFTS was fantastic. They built a user-friendly e-commerce website, and everything runs smoothly. We've noticed an increase in sales, and customer feedback is great”`,
     tDate: "Mar 9, 2025",
@@ -167,7 +167,7 @@ let testimonials = [
   },
   {
     tName: "Jack",
-    tPost: "",
+    tPost: "Product Designer",
     tImage: "3.jpg",
     tMessage: `“SMI SOFTS’ digital marketing strategies have transformed our brand. Their social media campaigns and SEO efforts have greatly improved our visibility and engagement. They truly know what they’re doing”`,
     tDate: "Feb 16, 2025",
@@ -177,7 +177,7 @@ let testimonials = [
   },
   {
     tName: "Henry",
-    tPost: "",
+    tPost: "Marketing Head",
     tImage: "4.jpg",
     tMessage: `“Developing a mobile app with SMI SOFTS was a great experience. The team focused on user experience and functionality, which outstanding. They met all deadlines, and communication throughout the process was seamless”`,
     tDate: "Jan 10, 2025",

@@ -1,120 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Page Not Found | SMI Softs</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | SMI Softs</title>
 
-        <meta name="description"
-            content="Let's Transform Your Vision into Reality">
+    <meta name="description" content="Let's Transform Your Vision into Reality">
 
-        <!-- Open Graph Meta Tags -->
-        <meta property="og:title" content="SMI Softs">
-        <meta property="og:description"
-            content="Let's Transform Your Vision into Reality">
-        <meta property="og:image"
-            content="https://smi-softs.netlify.app/assets/images/favicon.png">
-        <meta property="og:url" content="https://smi-softs.netlify.app/">
-        <meta property="og:type" content="website">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="SMI Softs">
+    <meta property="og:description" content="Let's Transform Your Vision into Reality">
+    <meta property="og:image" content="https://smi-softs.netlify.app/assets/images/favicon.png">
+    <meta property="og:url" content="https://smi-softs.netlify.app/">
+    <meta property="og:type" content="website">
 
-        <!-- Style Links -->
-        <link rel="shortcut icon" href="assets/images/favicon.png">
-        <link rel="stylesheet" href="assets/css/config.css">
+    <!-- Style Links -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/config.css">
 
-        <style>
-            body:has(.notFoundSection){
-                overflow: hidden;
-                height: 100vh;
-                width: 100vw;
-            }
-            .notFoundSection{
-                width: 100vw;
-                height: 100vh;
-            }
-            .notFoundSection .contentNotFound{
-                position: absolute;
-                top: calc(50% + 190px);
-                left: 50%;
-                transform: translate(-50%, -50%);
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+    <style>
+        body:has(.notFoundSection) {
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
 
-                @media only screen and (max-width: 768px) {
-                    width: 100%;
-                    top: calc(50% + 170px);
-                }
-            }
-            .notFoundSection .contentNotFound .titleOops{
-                text-align: center;
-                text-transform: capitalize;
-                font-size: 5.5em;
-                font-family: "rightous";
-                color: #d8d8d8;
+        .notFoundSection {
+            width: 100vw;
+            height: 100vh;
+        }
 
-                @media only screen and (max-width: 768px) {
-                    font-size: 3.8em;
-                }
-            }
-            .notFoundSection .overlap{
+        .notFoundSection .contentNotFound {
+            position: absolute;
+            top: calc(50% + 190px);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @media only screen and (max-width: 768px) {
                 width: 100%;
-                height: 100%;
-                overflow: hidden;
-                position: relative;
+                top: calc(50% + 170px);
             }
-            .notFoundSection .overlap img{
-                position: absolute;
-                top: 1.0rem;
-                left: 1.0rem;
-                z-index: 3;
-                width: 15%;
-                @media only screen and (max-width: 768px) {
-                    width: 45%;
-                }
-            }
-            .notFoundSection object{
-                object-fit: cover; 
-                height: 100%;
-                width: 100%;
-                filter:hue-rotate(169deg) saturate(2.0);
-                overflow: hidden;
+        }
 
-                @media only screen and (max-width: 768px) {
-                    scale: 1.45;
-                }
-            }
-        </style>
-    </head>
+        .notFoundSection .contentNotFound .titleOops {
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 5.5em;
+            font-family: "rightous";
+            color: #d8d8d8;
 
-    <body>
-        <div class="preloader">
-            <img src="assets/images/favicon.svg" loading="lazy" alt>
+            @media only screen and (max-width: 768px) {
+                font-size: 3.8em;
+            }
+        }
+
+        .notFoundSection .overlap {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .notFoundSection .overlap img {
+            position: absolute;
+            top: 1.0rem;
+            left: 1.0rem;
+            z-index: 3;
+            width: 15%;
+
+            @media only screen and (max-width: 768px) {
+                width: 45%;
+            }
+        }
+
+        .notFoundSection object {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            filter: hue-rotate(169deg) saturate(2.0);
+            overflow: hidden;
+
+            @media only screen and (max-width: 768px) {
+                scale: 1.45;
+            }
+        }
+    </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1564942864429300');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1564942864429300&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+</head>
+
+<body>
+    <div class="preloader">
+        <img src="assets/images/favicon.svg" loading="lazy" alt>
+    </div>
+    <section class="notFoundSection">
+        <div class="overlap">
+            <a href="index.html#home">
+                <img src="assets/images/logo.svg" class="hvr-buzz-out" alt="">
+            </a>
+            <object type="image/svg+xml" data="assets/images/404 page.svg" alt="Page Not Found">
+            </object>
         </div>
-        <section class="notFoundSection">
-            <div class="overlap">
-                <a href="index.html#home">
-                    <img src="assets/images/logo.svg" class="hvr-buzz-out" alt="">
-                </a>
-                <object type="image/svg+xml"
-                    data="assets/images/404 page.svg"
-                    alt="Page Not Found">
-                </object>
-            </div>
-            <div class="contentNotFound">
-                <h1 class="titleOops mb-3">Oops...</h1>
-                <h1 class="title mb-3">Page <span class="textContent">Not</span> Found!</h1>
-                <a href="index.html#home" class="btnPrimary hvr-buzz-out"><i class="fas fa-home me-2"></i> Go To Home</a>
-            </div>
-        </section>
-    </body>
-    <script src="assets/js/vanilla-tilt.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/projects.script.js"></script>
-    <script src="assets/js/component.js"></script>
-    <script src="assets/js/script.whatsapp.js"></script>
-    <script src="assets/js/script.js"></script>
+        <div class="contentNotFound">
+            <h1 class="titleOops mb-3">Oops...</h1>
+            <h1 class="title mb-3">Page <span class="textContent">Not</span> Found!</h1>
+            <a href="index.html#home" class="btnPrimary hvr-buzz-out"><i class="fas fa-home me-2"></i> Go To Home</a>
+        </div>
+    </section>
+</body>
+<script src="assets/js/vanilla-tilt.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/projects.script.js"></script>
+<script src="assets/js/component.js"></script>
+<script src="assets/js/script.whatsapp.js"></script>
+<script src="assets/js/script.js"></script>
 
 </html>

@@ -167,7 +167,7 @@ if (document.querySelector("footer")) {
             </div>
             <hr>
             <div class="container bottomContainer">
-                <p>©Copyright 2024 | <a href="index.html"> SMI SOFTS</a></p>
+                <p> © 2024 | <a href="index.html"> SMI SOFTS</a></p>
                 <div class="social">
                 <a href="https://www.linkedin.com/in/smisofts/" class="shadow"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=61558826642078" class="shadow"><i class="fa-brands fa-facebook-f"></i></a>
