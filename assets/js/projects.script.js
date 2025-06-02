@@ -30,6 +30,21 @@ let categories = ["Web Design", "Web Application", "Mobile Application",
 
 let projects = [
   {
+    pName: "AeroShine Duct Cleaning",
+    pImage: ["23.jpg"],
+    pLink: "https://aeroshineduct.com/",
+    pCategory: categories[1],
+    pDesc: `AeroShine Duct Cleaning Services delivers a breath of fresh air through their
+    meticulous and customer-focused approach. Their expert technicians provide a thorough
+    cleaning of your air ducts and vents, ensuring improved indoor air quality and a healthier
+    living environment. Experience the difference of their dedicated service, where payment is
+    only required upon your complete satisfaction. Discover cleaner air and a more efficient
+    HVAC system with AeroShine Duct Cleaning Services at www.aeroshineduct.com.`,
+    pTech: [0, 1, 2, 3, 4, 5],
+    pDate: "",
+    pViews: "05",
+  },
+  {
     pName: "Regularhost",
     pImage: ["1.png"],
     pLink: "https://regularhost.com/",

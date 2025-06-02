@@ -159,9 +159,22 @@ if (document.querySelector("footer")) {
                                 maxlength="40" name="mail" required>
                             <button><i class="fa-solid fa-arrow-right"></i></button>
                         </form>
-                        <iframe class="footerMap"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.6249228287566!2d67.16220575552589!3d24.876656876767974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2b19914cac05997%3A0x924446a3bb37ae3!2sSMI%20SOFTS!5e0!3m2!1sen!2s!4v1728140218332!5m2!1sen!2s"
-            allowfullscreen loading="lazy"></iframe>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <h6 class="text-center"> Serbia </h6>
+                                <iframe class="footerMap"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2827.438627886751!2d19.835158276111915!3d45.2447616480535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b1015cc9bb1d7%3A0x2fe4e21dde3c09b7!2sVojvo%C4%91anska%2C%20Novi%20Sad%2C%20Serbia!5e1!3m2!1sen!2s!4v1748280240357!5m2!1sen!2s"
+                                width="600" height="450" style="border:0;" allowfullscreen=""
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                            <h6 class="text-center"> Pakistan </h6>
+                                <iframe class="footerMap"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.1901682924936!2d67.15950008151793!3d24.87665758769348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33900687104e1%3A0x5a99638c9e10052c!2sSMI%20SOFTS!5e1!3m2!1sen!2s!4v1748280386312!5m2!1sen!2s"
+                                width="600" height="450" style="border:0; allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
