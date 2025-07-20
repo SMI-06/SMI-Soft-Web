@@ -10,6 +10,7 @@ if (document.querySelector(".top")) {
                 </div>
                 <div class="col-md-8 col-lg-8 contactDetails">
                     <a href="#"><i class="fa-regular fa-envelope"></i> <span class="ms-1">info@smisofts.com</span></a>
+                    <a href="#"><i class="fa-solid fa fa-whatsapp"></i> <span class="ms-1">+44 7917-317-216</span></a>
                     <a href="#"><i class="fa-solid fa-phone"></i> <span class="ms-1">+92 301-024-7722</span></a>
                 </div>
             </div>
@@ -125,6 +126,7 @@ if (document.querySelector("footer")) {
                                 <i class="fa-solid fa-paper-plane"></i>
                                 <span>say hello</span>
                             </div>
+                            <a href="tel:+44 7917-317-216">+44 7917-317-216</a>
                             <a href="tel:+92 301-024-7722">+92 301-024-7722</a>
                             <a href="mailto:info@smisofts.com">info@smisofts.com</a>
                         </div>
@@ -161,11 +163,10 @@ if (document.querySelector("footer")) {
                         </form>
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
-                                <h6 class="text-center"> Serbia </h6>
-                                <iframe class="footerMap"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2827.438627886751!2d19.835158276111915!3d45.2447616480535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b1015cc9bb1d7%3A0x2fe4e21dde3c09b7!2sVojvo%C4%91anska%2C%20Novi%20Sad%2C%20Serbia!5e1!3m2!1sen!2s!4v1748280240357!5m2!1sen!2s"
-                                width="600" height="450" style="border:0;" allowfullscreen=""
-                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <h6 class="text-center"> London </h6>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d159892.07061580304!2d-0.26640524174495667!3d51.528739804845316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e1!3m2!1sen!2s!4v1749464320587!5m2!1sen!2s"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                             <div class="col-lg-6 col-md-6">
                             <h6 class="text-center"> Pakistan </h6>
@@ -180,7 +181,7 @@ if (document.querySelector("footer")) {
             </div>
             <hr>
             <div class="container bottomContainer">
-                <p> © 2024 | <a href="index.html"> SMI SOFTS</a></p>
+                <p> © 2025 | <a href="index.html"> SMI SOFTS</a></p>
                 <div class="social">
                 <a href="https://www.linkedin.com/in/smisofts/" class="shadow"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://www.facebook.com/profile.php?id=61558826642078" class="shadow"><i class="fa-brands fa-facebook-f"></i></a>
